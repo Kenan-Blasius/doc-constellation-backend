@@ -910,6 +910,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-a-jwt-token" class="md-nav__link">
+    Obtaining a JWT Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request-with-jwt-token" class="md-nav__link">
+    Example Request with JWT Token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-all-constellations-linked-to-the-user" class="md-nav__link">
     Get All Constellations Linked to the User
   </a>
@@ -1277,6 +1311,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-a-jwt-token" class="md-nav__link">
+    Obtaining a JWT Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request-with-jwt-token" class="md-nav__link">
+    Example Request with JWT Token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-all-constellations-linked-to-the-user" class="md-nav__link">
     Get All Constellations Linked to the User
   </a>
@@ -1476,6 +1544,20 @@
 
 <h1 id="constellations-api">Constellations API</h1>
 <p>This document provides detailed information about the constellation-related API endpoints available in the Constellation project.</p>
+<h2 id="authentication">Authentication</h2>
+<p>All API requests require authentication using a JWT bearer token. You must include the token in the <code>Authorization</code> header of your requests.</p>
+<h3 id="example">Example</h3>
+<p>To include the JWT token in your request headers, use the following format:</p>
+<div class="highlight"><pre><span></span><code>Authorization: Bearer &lt;your-jwt-token&gt;
+</code></pre></div>
+<h3 id="obtaining-a-jwt-token">Obtaining a JWT Token</h3>
+<p>You can obtain a JWT token by logging in with your credentials. The token will be included in the response from the login endpoint.</p>
+<h3 id="example-request-with-jwt-token">Example Request with JWT Token</h3>
+<p>Here is an example of how to include the JWT token in a request to the <code>/constellations</code> endpoint:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/constellations</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api.example.com</span>
+<span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer &lt;your-jwt-token&gt;</span>
+</code></pre></div>
 <h2 id="get-all-constellations-linked-to-the-user">Get All Constellations Linked to the User</h2>
 <h3 id="get-constellations">GET <code>/constellations</code></h3>
 <p>Retrieve all constellations linked to the user.</p>
@@ -1483,17 +1565,17 @@
 - <code>200 OK</code>: Returns a list of constellations.</p>
 <p><strong>Response Example</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;constellations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
+<span class="w">  </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <h2 id="create-a-new-constellation">Create a New Constellation</h2>
 <h3 id="post-constellations">POST <code>/constellations</code></h3>
 <p>Create a new constellation.</p>
+<blockquote>
+<p>[!NOTE]\
+You will have admin rights on the constellation you create.</p>
+</blockquote>
 <p><strong>Request Body:</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
@@ -1515,16 +1597,21 @@
 - <code>constellation_uuid</code> (path): The unique identifier of the constellation.</p>
 <p><strong>Response:</strong>
 - <code>200 OK</code>: Returns constellation details.
+- <code>400 Invalid constellation UUID</code>: Invalid constellation UUID.
 - <code>404 Not Found</code>: Constellation not found.</p>
 <p><strong>Response Example</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;root_folder_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <h2 id="update-a-constellations-name">Update a Constellation's Name</h2>
 <h3 id="patch-constellationsconstellation_uuid">PATCH <code>/constellations/{constellation_uuid}</code></h3>
 <p>Update a constellation's name.</p>
+<blockquote>
+<p>[!NOTE]\
+You must have write rights on the constellation to update its name.</p>
+</blockquote>
 <p><strong>Request Parameters:</strong>
 - <code>constellation_uuid</code> (path): The unique identifier of the constellation.</p>
 <p><strong>Request Body:</strong>
@@ -1534,21 +1621,25 @@
 </code></pre></div></p>
 <p><strong>Response:</strong>
 - <code>200 OK</code>: Constellation name successfully updated.
-- <code>400 Bad Request</code>: Invalid input data.
+- <code>400 Invalid constellation UUID</code>: Invalid constellation UUID.
 - <code>404 Not Found</code>: Constellation not found.</p>
 <p><strong>Response Example</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <h2 id="delete-a-constellation-by-its-id">Delete a Constellation by its ID</h2>
 <h3 id="delete-constellationsconstellation_uuid">DELETE <code>/constellations/{constellation_uuid}</code></h3>
 <p>Delete a constellation by its ID.</p>
+<blockquote>
+<p>[!NOTE]\
+You must be an admin to access this endpoint</p>
+</blockquote>
 <p><strong>Request Parameters:</strong>
 - <code>constellation_uuid</code> (path): The unique identifier of the constellation.</p>
 <p><strong>Response:</strong>
 - <code>200 OK</code>: Constellation successfully deleted.
+- <code>400 Invalid constellation UUID</code>: Invalid constellation UUID.
 - <code>404 Not Found</code>: Constellation not found.</p>
 <p><strong>Response Example</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1558,6 +1649,10 @@
 <h2 id="connect-a-user-to-a-constellation">Connect a User to a Constellation</h2>
 <h3 id="post-constellationsconstellation_uuidconnect">POST <code>/constellations/{constellation_uuid}/connect</code></h3>
 <p>Connect a user to a constellation.</p>
+<blockquote>
+<p>[!NOTE]\
+You must have admin rights on the constellation to connect a user.</p>
+</blockquote>
 <p><strong>Request Parameters:</strong>
 - <code>constellation_uuid</code> (path): The unique identifier of the constellation.
 - <code>user_uuid_to_connect</code>: The unique identifier of the user
@@ -1579,6 +1674,10 @@
 <h2 id="disconnect-a-user-from-a-constellation">Disconnect a User from a Constellation</h2>
 <h3 id="post-constellationsconstellation_uuiddisconnect">POST <code>/constellations/{constellation_uuid}/disconnect</code></h3>
 <p>Disconnect a user from a constellation.</p>
+<blockquote>
+<p>[!NOTE]\
+You must have admin rights on the constellation to disconnect a user.</p>
+</blockquote>
 <p><strong>Request Parameters:</strong>
 - <code>constellation_uuid</code> (path): The unique identifier of the constellation.
 - <code>user_uuid_to_disconnect</code>: The unique identifier of the user
@@ -1600,21 +1699,23 @@
 <h2 id="get-all-users-associated-with-a-constellation">Get All Users Associated with a Constellation</h2>
 <h3 id="get-constellationsconstellation_uuidusers">GET <code>/constellations/{constellation_uuid}/users</code></h3>
 <p>Retrieve all users associated with a constellation.</p>
+<blockquote>
+<p>[!NOTE]\
+Everyone with at least read rights can access this endpoint.</p>
+</blockquote>
 <p><strong>Request Parameters:</strong>
 - <code>constellation_uuid</code> (path): The unique identifier of the constellation.</p>
 <p><strong>Response:</strong>
 - <code>200 OK</code>: Returns a list of users associated with the constellation.
 - <code>404 Not Found</code>: Constellation not found.</p>
 <p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;users&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;user_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;rights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
 </code></pre></div></p>
 <h2 id="get-the-root-structure-of-a-constellation">Get the Root Structure of a Constellation</h2>
 <h3 id="get-structureconstellation_uuid">GET <code>/structure/{constellation_uuid}</code></h3>
@@ -1626,22 +1727,23 @@
 - <code>404 Not Found</code>: Constellation not found.</p>
 <p><strong>Response Example</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;root_structure&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;folders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;folder_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;file_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;folder&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;children&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;folder&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;children&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div></p>
 

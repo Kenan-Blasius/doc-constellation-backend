@@ -950,6 +950,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-a-jwt-token" class="md-nav__link">
+    Obtaining a JWT Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request-with-jwt-token" class="md-nav__link">
+    Example Request with JWT Token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-all-images" class="md-nav__link">
     List All Images
   </a>
@@ -1197,6 +1231,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-a-jwt-token" class="md-nav__link">
+    Obtaining a JWT Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request-with-jwt-token" class="md-nav__link">
+    Example Request with JWT Token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-all-images" class="md-nav__link">
     List All Images
   </a>
@@ -1316,6 +1384,20 @@
 
 <h1 id="images-api">Images API</h1>
 <p>This document provides detailed information about the image-related API endpoints available in the Constellation project.</p>
+<h2 id="authentication">Authentication</h2>
+<p>All API requests require authentication using a JWT bearer token. You must include the token in the <code>Authorization</code> header of your requests.</p>
+<h3 id="example">Example</h3>
+<p>To include the JWT token in your request headers, use the following format:</p>
+<div class="highlight"><pre><span></span><code>Authorization: Bearer &lt;your-jwt-token&gt;
+</code></pre></div>
+<h3 id="obtaining-a-jwt-token">Obtaining a JWT Token</h3>
+<p>You can obtain a JWT token by logging in with your credentials. The token will be included in the response from the login endpoint.</p>
+<h3 id="example-request-with-jwt-token">Example Request with JWT Token</h3>
+<p>Here is an example of how to include the JWT token in a request to the <code>/constellations</code> endpoint:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/constellations</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api.example.com</span>
+<span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer &lt;your-jwt-token&gt;</span>
+</code></pre></div>
 <h2 id="list-all-images">List All Images</h2>
 <h3 id="get-images">GET <code>/images</code></h3>
 <p>Retrieve a list of all images.</p>
@@ -1337,7 +1419,6 @@
 <p>Upload a new image.</p>
 <p><strong>Request Body:</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;binary&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
@@ -1346,9 +1427,8 @@
 - <code>400 Bad Request</code>: Invalid input data.</p>
 <p><strong>Response Example</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;image_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">  </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;filename&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <h2 id="get-an-image">Get an Image</h2>
@@ -1361,14 +1441,16 @@
 - <code>404 Not Found</code>: Image not found.</p>
 <p><strong>Response Example</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;image_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">  </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;binary&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <h2 id="rename-an-image">Rename an Image</h2>
 <h3 id="patch-imagesimage_uuid">PATCH <code>/images/{image_uuid}</code></h3>
 <p>Rename an image.</p>
+<blockquote>
+<p>[!NOTE]\
+You must have write access to the image's constellation to rename it.</p>
+</blockquote>
 <p><strong>Request Parameters:</strong>
 - <code>image_uuid</code> (path): The unique identifier of the image.</p>
 <p><strong>Request Body:</strong>
@@ -1390,6 +1472,10 @@
 <h2 id="delete-an-image">Delete an Image</h2>
 <h3 id="delete-imagesimage_uuid">DELETE <code>/images/{image_uuid}</code></h3>
 <p>Delete an image.</p>
+<blockquote>
+<p>[!NOTE]\
+You must have write access to the image's constellation to delete it.</p>
+</blockquote>
 <p><strong>Request Parameters:</strong>
 - <code>image_uuid</code> (path): The unique identifier of the image.</p>
 <p><strong>Response:</strong>
