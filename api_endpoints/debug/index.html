@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../comments/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../testing/overview/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>Constellation-Back-End-Documentation</title>
+        <title>Debug Endpoints - Constellation-Back-End-Documentation</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
   
@@ -83,7 +87,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -111,6 +115,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#debug-api" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -121,7 +130,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Constellation-Back-End-Documentation" class="md-header__button md-logo" aria-label="Constellation-Back-End-Documentation" data-md-component="logo">
+    <a href="../.." title="Constellation-Back-End-Documentation" class="md-header__button md-logo" aria-label="Constellation-Back-End-Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -141,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Debug Endpoints
             
           </span>
         </div>
@@ -247,7 +256,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
     
@@ -267,7 +276,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/database_schema/overview/" class="md-tabs__link">
+        <a href="../../database_schema/overview/" class="md-tabs__link">
           
   
     
@@ -283,11 +292,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/api_endpoints/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
     
@@ -307,7 +318,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/testing/overview/" class="md-tabs__link">
+        <a href="../../testing/overview/" class="md-tabs__link">
           
   
     
@@ -342,7 +353,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Constellation-Back-End-Documentation" class="md-nav__button md-logo" aria-label="Constellation-Back-End-Documentation" data-md-component="logo">
+    <a href="../.." title="Constellation-Back-End-Documentation" class="md-nav__button md-logo" aria-label="Constellation-Back-End-Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -394,7 +405,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/." class="md-nav__link ">
+            <a href="../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -425,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/purpose.md" class="md-nav__link">
+      <a href="../../purpose.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/run_locally.md" class="md-nav__link">
+      <a href="../../run_locally.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -516,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database_schema/overview/" class="md-nav__link">
+      <a href="../../database_schema/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -586,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database_schema/tables/users/" class="md-nav__link">
+      <a href="../../database_schema/tables/users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database_schema/tables/constellations/" class="md-nav__link">
+      <a href="../../database_schema/tables/constellations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database_schema/tables/files/" class="md-nav__link">
+      <a href="../../database_schema/tables/files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database_schema/tables/images/" class="md-nav__link">
+      <a href="../../database_schema/tables/images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database_schema/tables/user_constellation.md" class="md-nav__link">
+      <a href="../../database_schema/tables/user_constellation.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -686,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database_schema/tables/comments/" class="md-nav__link">
+      <a href="../../database_schema/tables/comments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database_schema/relationships/" class="md-nav__link">
+      <a href="../../database_schema/relationships/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database_schema/indexes/" class="md-nav__link">
+      <a href="../../database_schema/indexes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -759,6 +770,8 @@
       
   
   
+    
+  
   
     
     
@@ -779,13 +792,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -798,7 +811,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             API Endpoints
@@ -811,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api_endpoints/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api_endpoints/users/" class="md-nav__link">
+      <a href="../users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api_endpoints/constellations/" class="md-nav__link">
+      <a href="../constellations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api_endpoints/files/" class="md-nav__link">
+      <a href="../files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api_endpoints/images/" class="md-nav__link">
+      <a href="../images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api_endpoints/comments/" class="md-nav__link">
+      <a href="../comments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,9 +942,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/api_endpoints/debug/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Debug Endpoints
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -940,6 +973,246 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-users" class="md-nav__link">
+    Get All Users
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-users" class="md-nav__link">
+    GET /users
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-files" class="md-nav__link">
+    Get All Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-files" class="md-nav__link">
+    GET /files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-constellations" class="md-nav__link">
+    Get All Constellations
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Constellations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-all_constellations" class="md-nav__link">
+    GET /all_constellations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-images" class="md-nav__link">
+    Get All Images
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-all_images" class="md-nav__link">
+    GET /all_images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-comments" class="md-nav__link">
+    Get All Comments
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-comments" class="md-nav__link">
+    GET /comments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-user-constellations" class="md-nav__link">
+    Get All User Constellations
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All User Constellations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-user_constellations" class="md-nav__link">
+    GET /user_constellations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-access-token" class="md-nav__link">
+    Test the Access Token
+  </a>
+  
+    <nav class="md-nav" aria-label="Test the Access Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-test-token" class="md-nav__link">
+    POST /test-token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-users-table" class="md-nav__link">
+    Create the Users Table
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the Users Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-create_table" class="md-nav__link">
+    GET /create_table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-all-the-database" class="md-nav__link">
+    Delete All the Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete All the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-delete_everything" class="md-nav__link">
+    GET /delete_everything
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-the-database" class="md-nav__link">
+    Reset the Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Reset the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-reset" class="md-nav__link">
+    GET /reset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populate-the-database" class="md-nav__link">
+    Populate the Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Populate the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-populate" class="md-nav__link">
+    GET /populate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -996,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/testing/overview/" class="md-nav__link">
+      <a href="../../testing/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,6 +1307,236 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-users" class="md-nav__link">
+    Get All Users
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-users" class="md-nav__link">
+    GET /users
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-files" class="md-nav__link">
+    Get All Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-files" class="md-nav__link">
+    GET /files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-constellations" class="md-nav__link">
+    Get All Constellations
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Constellations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-all_constellations" class="md-nav__link">
+    GET /all_constellations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-images" class="md-nav__link">
+    Get All Images
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-all_images" class="md-nav__link">
+    GET /all_images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-comments" class="md-nav__link">
+    Get All Comments
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-comments" class="md-nav__link">
+    GET /comments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-user-constellations" class="md-nav__link">
+    Get All User Constellations
+  </a>
+  
+    <nav class="md-nav" aria-label="Get All User Constellations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-user_constellations" class="md-nav__link">
+    GET /user_constellations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-access-token" class="md-nav__link">
+    Test the Access Token
+  </a>
+  
+    <nav class="md-nav" aria-label="Test the Access Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-test-token" class="md-nav__link">
+    POST /test-token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-users-table" class="md-nav__link">
+    Create the Users Table
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the Users Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-create_table" class="md-nav__link">
+    GET /create_table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-all-the-database" class="md-nav__link">
+    Delete All the Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete All the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-delete_everything" class="md-nav__link">
+    GET /delete_everything
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-the-database" class="md-nav__link">
+    Reset the Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Reset the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-reset" class="md-nav__link">
+    GET /reset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populate-the-database" class="md-nav__link">
+    Populate the Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Populate the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-populate" class="md-nav__link">
+    GET /populate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1045,8 +1548,171 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="debug-api">Debug API</h1>
+<p>This document provides detailed information about the debug-related API endpoints available in the Constellation project.</p>
+<h2 id="get-all-users">Get All Users</h2>
+<h3 id="get-users">GET <code>/users</code></h3>
+<p>Retrieve all users.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Returns a list of all users.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;users&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;user_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="get-all-files">Get All Files</h2>
+<h3 id="get-files">GET <code>/files</code></h3>
+<p>Retrieve all files.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Returns a list of all files.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;file_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;folder_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="get-all-constellations">Get All Constellations</h2>
+<h3 id="get-all_constellations">GET <code>/all_constellations</code></h3>
+<p>Retrieve all constellations.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Returns a list of all constellations.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;constellations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="get-all-images">Get All Images</h2>
+<h3 id="get-all_images">GET <code>/all_images</code></h3>
+<p>Retrieve all images.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Returns a list of all images.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;images&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;image_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="get-all-comments">Get All Comments</h2>
+<h3 id="get-comments">GET <code>/comments</code></h3>
+<p>Retrieve all comments.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Returns a list of all comments.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;comments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;comment_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;file_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="get-all-user-constellations">Get All User Constellations</h2>
+<h3 id="get-user_constellations">GET <code>/user_constellations</code></h3>
+<p>Retrieve all user constellations.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Returns a list of all user constellations.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;user_constellations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;user_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="test-the-access-token">Test the Access Token</h2>
+<h3 id="post-test-token">POST <code>/test-token</code></h3>
+<p>Test the access token.</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Token is valid.
+- <code>401 Unauthorized</code>: Token is invalid.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Token is valid&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="create-the-users-table">Create the Users Table</h2>
+<h3 id="get-create_table">GET <code>/create_table</code></h3>
+<p>Create the users table.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Users table successfully created.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Users table created&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="delete-all-the-database">Delete All the Database</h2>
+<h3 id="get-delete_everything">GET <code>/delete_everything</code></h3>
+<p>Delete all the database.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Database successfully deleted.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Database deleted&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="reset-the-database">Reset the Database</h2>
+<h3 id="get-reset">GET <code>/reset</code></h3>
+<p>Reset the database.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Database successfully reset.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Database reset&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="populate-the-database">Populate the Database</h2>
+<h3 id="get-populate">GET <code>/populate</code></h3>
+<p>Populate the database.</p>
+<p><strong>Response:</strong>
+- <code>200 OK</code>: Database successfully populated.</p>
+<p><strong>Response Example</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Database populated&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1086,10 +1752,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.tabs", "navigation.tracking", "navigation.indexes", "navigation.sections", "navigation.top"], "search": "/assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.tabs", "navigation.tracking", "navigation.indexes", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>
