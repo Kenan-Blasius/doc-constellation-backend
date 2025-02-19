@@ -1,6 +1,8 @@
 # Debug API
 
 This document provides detailed information about the debug-related API endpoints available in the Constellation project.
+All the debug endpoints are used for testing and debugging purposes only, and are available only in the development environment.
+As it's debug-related, it doesn't require authentication.
 
 ## Get All Users
 

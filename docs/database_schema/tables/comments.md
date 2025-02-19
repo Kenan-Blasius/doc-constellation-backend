@@ -14,26 +14,32 @@ The Comments table stores information about the comments made by users on conste
 ### uuid
 - **Type**: UUID
 - **Description**: The unique identifier for each comment.
+- **Example**: `123e4567-e89b-12d3-a456-426614174000`
 
 ### content
 - **Type**: Text
 - **Description**: The content of the comment.
+- **Example**: `This is a comment.`
 
 ### creator_uuid
 - **Type**: UUID
 - **Description**: The unique identifier of the user who made the comment.
+- **Example**: `123e4567-e89b-12d3-a456-426614174001`
 
 ### created_at
 - **Type**: Timestamp
 - **Description**: The timestamp when the comment was made.
+- **Example**: `2023-10-01 12:34:56`
 
 ### file_uuid
 - **Type**: UUID
 - **Description**: The unique identifier of the file on which the comment was made.
+- **Example**: `123e4567-e89b-12d3-a456-426614174002`
 
 ### parent_uuid
 - **Type**: UUID
 - **Description**: The unique identifier of the comment parent (if it is a reply).
+- **Example**: `123e4567-e89b-12d3-a456-426614174003`
 
 ## Relationships
 

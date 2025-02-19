@@ -2,6 +2,32 @@
 
 This document provides detailed information about the image-related API endpoints available in the Constellation project.
 
+## Authentication
+
+All API requests require authentication using a JWT bearer token. You must include the token in the `Authorization` header of your requests.
+
+### Example
+
+To include the JWT token in your request headers, use the following format:
+
+```
+Authorization: Bearer <your-jwt-token>
+```
+
+### Obtaining a JWT Token
+
+You can obtain a JWT token by logging in with your credentials. The token will be included in the response from the login endpoint.
+
+### Example Request with JWT Token
+
+Here is an example of how to include the JWT token in a request to the `/constellations` endpoint:
+
+```http
+GET /constellations HTTP/1.1
+Host: api.example.com
+Authorization: Bearer <your-jwt-token>
+```
+
 ## List All Images
 
 ### GET `/images`
@@ -31,7 +57,6 @@ Upload a new image.
 **Request Body:**
 ```json
 {
-  "name": "string",
   "file": "binary"
 }
 ```
@@ -43,9 +68,8 @@ Upload a new image.
 **Response Example**
 ```json
 {
-  "image_uuid": "0000-000000...",
-  "name": "string",
-  "url": "string"
+  "uuid": "0000-000000...",
+  "filename": "string"
 }
 ```
 
@@ -64,9 +88,7 @@ Retrieve an image by its ID.
 **Response Example**
 ```json
 {
-  "image_uuid": "0000-000000...",
-  "name": "string",
-  "url": "string"
+  "file": "binary"
 }
 ```
 
@@ -74,6 +96,9 @@ Retrieve an image by its ID.
 
 ### PATCH `/images/{image_uuid}`
 Rename an image.
+
+> [!NOTE]\
+> You must have write access to the image's constellation to rename it.
 
 **Request Parameters:**
 - `image_uuid` (path): The unique identifier of the image.
@@ -103,6 +128,9 @@ Rename an image.
 
 ### DELETE `/images/{image_uuid}`
 Delete an image.
+
+> [!NOTE]\
+> You must have write access to the image's constellation to delete it.
 
 **Request Parameters:**
 - `image_uuid` (path): The unique identifier of the image.

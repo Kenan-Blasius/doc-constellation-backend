@@ -2,6 +2,33 @@
 
 This document provides detailed information about the constellation-related API endpoints available in the Constellation project.
 
+
+## Authentication
+
+All API requests require authentication using a JWT bearer token. You must include the token in the `Authorization` header of your requests.
+
+### Example
+
+To include the JWT token in your request headers, use the following format:
+
+```
+Authorization: Bearer <your-jwt-token>
+```
+
+### Obtaining a JWT Token
+
+You can obtain a JWT token by logging in with your credentials. The token will be included in the response from the login endpoint.
+
+### Example Request with JWT Token
+
+Here is an example of how to include the JWT token in a request to the `/constellations` endpoint:
+
+```http
+GET /constellations HTTP/1.1
+Host: api.example.com
+Authorization: Bearer <your-jwt-token>
+```
+
 ## Get All Constellations Linked to the User
 
 ### GET `/constellations`
@@ -13,12 +40,8 @@ Retrieve all constellations linked to the user.
 **Response Example**
 ```json
 {
-  "constellations": [
-    {
-      "constellation_uuid": "0000-000000...",
-      "name": "string"
-    }
-  ]
+  "constellation_uuid": "0000-000000...",
+  "name": "string"
 }
 ```
 
@@ -26,6 +49,10 @@ Retrieve all constellations linked to the user.
 
 ### POST `/constellations`
 Create a new constellation.
+
+> [!NOTE]\
+> You will have admin rights on the constellation you create.
+
 
 **Request Body:**
 ```json
@@ -56,12 +83,13 @@ Retrieve a constellation by its ID.
 
 **Response:**
 - `200 OK`: Returns constellation details.
+- `400 Invalid constellation UUID`: Invalid constellation UUID.
 - `404 Not Found`: Constellation not found.
 
 **Response Example**
 ```json
 {
-  "constellation_uuid": "0000-000000...",
+  "root_folder_uuid": "0000-000000...",
   "name": "string"
 }
 ```
@@ -70,6 +98,9 @@ Retrieve a constellation by its ID.
 
 ### PATCH `/constellations/{constellation_uuid}`
 Update a constellation's name.
+
+> [!NOTE]\
+> You must have write rights on the constellation to update its name.
 
 **Request Parameters:**
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -83,13 +114,12 @@ Update a constellation's name.
 
 **Response:**
 - `200 OK`: Constellation name successfully updated.
-- `400 Bad Request`: Invalid input data.
+- `400 Invalid constellation UUID`: Invalid constellation UUID.
 - `404 Not Found`: Constellation not found.
 
 **Response Example**
 ```json
 {
-  "constellation_uuid": "0000-000000...",
   "name": "string"
 }
 ```
@@ -99,11 +129,15 @@ Update a constellation's name.
 ### DELETE `/constellations/{constellation_uuid}`
 Delete a constellation by its ID.
 
+> [!NOTE]\
+> You must be an admin to access this endpoint
+
 **Request Parameters:**
 - `constellation_uuid` (path): The unique identifier of the constellation.
 
 **Response:**
 - `200 OK`: Constellation successfully deleted.
+- `400 Invalid constellation UUID`: Invalid constellation UUID.
 - `404 Not Found`: Constellation not found.
 
 **Response Example**
@@ -117,6 +151,9 @@ Delete a constellation by its ID.
 
 ### POST `/constellations/{constellation_uuid}/connect`
 Connect a user to a constellation.
+
+> [!NOTE]\
+> You must have admin rights on the constellation to connect a user.
 
 **Request Parameters:**
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -147,6 +184,9 @@ Connect a user to a constellation.
 ### POST `/constellations/{constellation_uuid}/disconnect`
 Disconnect a user from a constellation.
 
+> [!NOTE]\
+> You must have admin rights on the constellation to disconnect a user.
+
 **Request Parameters:**
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `user_uuid_to_disconnect`: The unique identifier of the user
@@ -176,6 +216,9 @@ Disconnect a user from a constellation.
 ### GET `/constellations/{constellation_uuid}/users`
 Retrieve all users associated with a constellation.
 
+> [!NOTE]\
+> Everyone with at least read rights can access this endpoint.
+
 **Request Parameters:**
 - `constellation_uuid` (path): The unique identifier of the constellation.
 
@@ -185,15 +228,13 @@ Retrieve all users associated with a constellation.
 
 **Response Example**
 ```json
-{
-  "users": [
-    {
-      "user_uuid": "0000-000000...",
-      "username": "string",
-      "email": "string"
-    }
-  ]
-}
+[
+  {
+    "uuid": "0000-000000...",
+    "name": "string",
+    "rights": "string"
+  }
+]
 ```
 
 
@@ -212,22 +253,23 @@ Retrieve the root structure of a constellation.
 **Response Example**
 ```json
 {
-  "constellation_uuid": "0000-000000...",
-  "root_structure": {
-    "folders": [
-      {
-        "folder_uuid": "0000-000000...",
-        "name": "string"
-      }
-    ],
-    "files": [
-      {
-        "file_uuid": "0000-000000...",
-        "name": "string",
-        "content": "string"
-      }
-    ]
-  }
+  "uuid": "0000-000000...",
+  "name": "string",
+  "type": "folder",
+  "children": [
+    {
+      "uuid": "0000-000000...",
+      "name": "string",
+      "type": "folder",
+      "children": [
+        {
+          "uuid": "0000-000000...",
+          "name": "string",
+          "type": "file"
+        }
+      ]
+    }
+  ]
 }
 ```
 

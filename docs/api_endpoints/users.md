@@ -2,32 +2,6 @@
 
 This document provides detailed information about the user-related API endpoints available in the Constellation project.
 
-## Check Token and Constellation Access
-
-### POST `/check_token/{constellation_uuid}`
-Check JWT token and constellation access.
-
-**Request Parameters:**
-- `constellation_uuid` (path): The unique identifier of the constellation.
-
-**Request Body:**
-```json
-{
-  "token": "string"
-}
-```
-
-**Response:**
-- `200 OK`: Token is valid and user has access.
-- `401 Unauthorized`: Token is invalid or user does not have access.
-
-**Response Example**
-```json
-{
-  "rights": "admin"
-}
-```
-
 ## Register a New User
 
 ### POST `/register`
@@ -80,6 +54,52 @@ Login a user.
 }
 ```
 
+## Authentication
+
+All the next API requests require authentication using a JWT bearer token. You must include the token in the `Authorization` header of your requests.
+
+### Example
+
+To include the JWT token in your request headers, use the following format:
+
+```
+Authorization: Bearer <your-jwt-token>
+```
+
+### Obtaining a JWT Token
+
+You can obtain a JWT token by logging in with your credentials. The token will be included in the response from the login endpoint.
+
+### Example Request with JWT Token
+
+Here is an example of how to include the JWT token in a request to the `/constellations` endpoint:
+
+```http
+GET /constellations HTTP/1.1
+Host: api.example.com
+Authorization: Bearer <your-jwt-token>
+```
+
+
+## Check Token and Constellation Access
+
+### POST `/check_token/{constellation_uuid}`
+Check JWT token and constellation access.
+
+**Request Parameters:**
+- `constellation_uuid` (path): The unique identifier of the constellation.
+
+**Response:**
+- `200 OK`: Token is valid and user has access.
+- `401 Unauthorized`: Token is invalid or user does not have access.
+
+**Response Example**
+```json
+{
+  "rights": "admin"
+}
+```
+
 ## Get a User by ID
 
 ### GET `/users/{user_uuid}`
@@ -95,7 +115,7 @@ Retrieve a user by their ID.
 **Response Example**
 ```json
 {
-    "user_uuid": "0000-000000...",
+    "uuid": "0000-000000...",
     "name": "string",
     "email": "string"
 }
@@ -105,6 +125,9 @@ Retrieve a user by their ID.
 
 ### DELETE `/users`
 Delete a user.
+
+> [!NOTE]\
+> Of course, you can only delete your own user.
 
 **Request Body:**
 ```json
@@ -128,6 +151,9 @@ Delete a user.
 
 ### PATCH `/users`
 Update a user. You can update the name, email, password, or all of them, depending on the request body.
+
+> [!NOTE]\
+> Of course, you can only update your own user.
 
 **Request Body:**
 ```json

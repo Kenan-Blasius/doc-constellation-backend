@@ -2,6 +2,32 @@
 
 This document provides detailed information about the comment-related API endpoints available in the Constellation project.
 
+## Authentication
+
+All the next API requests require authentication using a JWT bearer token. You must include the token in the `Authorization` header of your requests.
+
+### Example
+
+To include the JWT token in your request headers, use the following format:
+
+```
+Authorization: Bearer <your-jwt-token>
+```
+
+### Obtaining a JWT Token
+
+You can obtain a JWT token by logging in with your credentials. The token will be included in the response from the login endpoint.
+
+### Example Request with JWT Token
+
+Here is an example of how to include the JWT token in a request to the `/constellations` endpoint:
+
+```http
+GET /constellations HTTP/1.1
+Host: api.example.com
+Authorization: Bearer <your-jwt-token>
+```
+
 ## Create a New Comment
 
 ### POST `/files/{file_uuid}/comments`
