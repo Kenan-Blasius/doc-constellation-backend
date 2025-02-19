@@ -61,22 +61,45 @@ repo_name: constellation-story/constellation-backend
 repo_url: https://github.com/constellation-story/constellation-backend
 
 nav:
-- Acceuil:
-  - index.md
-# - Syntaxe:
-#   - syntax.md
-#   - raw-bnf.md
-# - Assembly:
-#   - assembly.md
-# - Tutoriels:
-#   - tutorials.md
-#   - tutorials/variables.md
-#   - tutorials/operators.md
-#   - tutorials/conditions.md
-#   - tutorials/loops.md
-#   - tutorials/functions.md
-# - Fonctionnalités:
-#   - features.md
-#   - features/variables.md
-#   - features/operators.md
-#   - features/strings.md
+  - Introduction:
+      - Overview: index.md
+      - Purpose: purpose.md
+      - Run Locally: run_locally.md
+  - Database Schema:
+      - Overview: database_schema/overview.md
+      - Tables:
+          - Users Table: database_schema/tables/users.md
+          - Constellations Table: database_schema/tables/constellations.md
+          - Files Table: database_schema/tables/files.md
+          - Images Table: database_schema/tables/images.md
+          - User_Constellation Table: database_schema/tables/user_constellation.md
+          - Comments Table: database_schema/tables/comments.md
+      - Relationships: database_schema/relationships.md
+      - Indexes: database_schema/indexes.md
+  - API Endpoints:
+      - Overview: api_endpoints/overview.md
+      - Users Endpoints: api_endpoints/users.md
+      - Constellations Endpoints: api_endpoints/constellations.md
+      - Files Endpoints: api_endpoints/files.md
+      - Images Endpoints: api_endpoints/images.md
+      - Comments Endpoints: api_endpoints/comments.md
+      - Debug Endpoints: api_endpoints/debug.md
+  - Testing:
+      - Overview: testing/overview.md
+      # - Unit Tests: testing/unit_tests.md
+      # - Integration Tests: testing/integration_tests.md
+      # - Test Coverage: testing/test_coverage.md
+  # - Deployment:
+  #     - Overview: deployment/overview.md
+  #     - Docker: deployment/docker.md
+  #     - GitHub Actions: deployment/github_actions.md
+  # - Troubleshooting:
+  #     - Common Issues: troubleshooting/common_issues.md
+  #     - FAQ: troubleshooting/faq.md
+  # - Contributing:
+  #     - Overview: contributing/overview.md
+  #     - Guidelines: contributing/guidelines.md
+  #     - How to Contribute: contributing/how_to_contribute.md
+  # - Appendix:
+  #     - SQL Scripts: appendix/sql_scripts.md
+  #     - Configuration Files: appendix/configuration_files.md
