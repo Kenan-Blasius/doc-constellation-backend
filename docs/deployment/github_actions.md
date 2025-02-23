@@ -62,34 +62,33 @@ Le script de déploiement `deployBack.sh` est exécuté sur le serveur distant p
 graph TD;
    subgraph Serveur
    direction TB
-      A[Éxecute deployBack.sh] --> B{Git et Docker installés?};
-      B -- Oui --> C{Repository déjà cloné?};
-      B -- Non --> P[Erreur];
-      C -- Oui --> D[Pull Repository];
-      C -- Non --> E[Clone Repository];
-      D --> F[Repository à jour];
-      E --> F;
-      F --> G[~/deployDotEnv existe?];
-      F --> H[~/deployDotEnv n'existe pas?];
+      A[Éxecute deployBack.sh] --> B[Git et Docker installés?];
+      B -->|Oui| C[Repository déjà cloné?];
+      B -->|Non| P[Erreur];
+      C --> D[Oui];
+      C --> E[Non];
+      D -->|Pull| F;
+      E -->|Clone| F[Repository à jour];
+      F --> G[deployDotEnv existe];
+      F --> H[deployDotEnv n'existe pas];
 
-      subgraph "Gestion du .env"
+      subgraph Gestion du .env
          G --> I[Copie et renomme en .env];
-         H --> J{Un .env existe déjà dans le repository?};
-         J -- Oui --> L[Se rend dans le repository];
-         J -- Non --> K[Erreur];
+         H --> J[Un .env existe déjà dans le repository];
+         H --> K[Erreur];
       end
 
+      J --> L[Se rend dans le repository];
       I --> L;
       L --> M[Arrête et supprime les containers];
       M --> N[Lance les containers];
       N --> O[Crée deployStatus.txt];
-      O -- Déploiement réussi --> Success((Fin du Processus));
+      O -->|Déploiement réussi | Success((Fin du Processus));
    end
-
    subgraph GitHub_Actions
-      deploy.yml -- Crée --> deployDotEnv;
-      deployDotEnv -- Copie --> Serveur;
-      deploy.yml -- Copie deployBack.sh --> Serveur;
-      deploy.yml -- SSH --> Serveur;
+      deploy.yml -->|Creates| deployDotEnv;
+      deployDotEnv -->|Copie| Serveur;
+      deploy.yml -->|Copies deployBack.sh| Serveur;
+      deploy.yml -->|SSH| Serveur;
    end
 ```
