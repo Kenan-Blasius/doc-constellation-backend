@@ -89,10 +89,10 @@ nav:
       # - Unit Tests: testing/unit_tests.md
       # - Integration Tests: testing/integration_tests.md
       # - Test Coverage: testing/test_coverage.md
-  # - Deployment:
-  #     - Overview: deployment/overview.md
-  #     - Docker: deployment/docker.md
-  #     - GitHub Actions: deployment/github_actions.md
+  - Deployment:
+      - Overview: deployment/overview.md
+      - GitHub Actions: deployment/github_actions.md
+      # - Docker: deployment/docker.md
   # - Troubleshooting:
   #     - Common Issues: troubleshooting/common_issues.md
   #     - FAQ: troubleshooting/faq.md
