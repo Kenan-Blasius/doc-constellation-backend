@@ -1399,35 +1399,34 @@ La github action est définie dans le fichier <code>.github/workflows/deploy.yml
 <pre class="mermaid"><code>graph TD;
    subgraph Serveur
    direction TB
-      A[Éxecute deployBack.sh] --&gt; B{Git et Docker installés?};
-      B -- Oui --&gt; C{Repository déjà cloné?};
-      B -- Non --&gt; P[Erreur];
-      C -- Oui --&gt; D[Pull Repository];
-      C -- Non --&gt; E[Clone Repository];
-      D --&gt; F[Repository à jour];
-      E --&gt; F;
-      F --&gt; G[~/deployDotEnv existe?];
-      F --&gt; H[~/deployDotEnv n'existe pas?];
+      A[Éxecute deployBack.sh] --&gt; B[Git et Docker installés?];
+      B --&gt;|Oui| C[Repository déjà cloné?];
+      B --&gt;|Non| P[Erreur];
+      C --&gt; D[Oui];
+      C --&gt; E[Non];
+      D --&gt;|Pull| F;
+      E --&gt;|Clone| F[Repository à jour];
+      F --&gt; G[deployDotEnv existe];
+      F --&gt; H[deployDotEnv n'existe pas];
 
-      subgraph "Gestion du .env"
+      subgraph Gestion du .env
          G --&gt; I[Copie et renomme en .env];
-         H --&gt; J{Un .env existe déjà dans le repository?};
-         J -- Oui --&gt; L[Se rend dans le repository];
-         J -- Non --&gt; K[Erreur];
+         H --&gt; J[Un .env existe déjà dans le repository];
+         H --&gt; K[Erreur];
       end
 
+      J --&gt; L[Se rend dans le repository];
       I --&gt; L;
       L --&gt; M[Arrête et supprime les containers];
       M --&gt; N[Lance les containers];
       N --&gt; O[Crée deployStatus.txt];
-      O -- Déploiement réussi --&gt; Success((Fin du Processus));
+      O --&gt;|Déploiement réussi | Success((Fin du Processus));
    end
-
    subgraph GitHub_Actions
-      deploy.yml -- Crée --&gt; deployDotEnv;
-      deployDotEnv -- Copie --&gt; Serveur;
-      deploy.yml -- Copie deployBack.sh --&gt; Serveur;
-      deploy.yml -- SSH --&gt; Serveur;
+      deploy.yml --&gt;|Creates| deployDotEnv;
+      deployDotEnv --&gt;|Copie| Serveur;
+      deploy.yml --&gt;|Copies deployBack.sh| Serveur;
+      deploy.yml --&gt;|SSH| Serveur;
    end</code></pre>
 
 
