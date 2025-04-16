@@ -1,6 +1,6 @@
-# API Endpoints Overview
+# Postgres API Endpoints Overview
 
-This document provides an overview of the API endpoints available in the Constellation project. Each endpoint is categorized based on its functionality. Click on the links to view detailed documentation for each category.
+This document provides an overview of the Postgres API endpoints available in the Constellation project. Each endpoint is categorized based on its functionality. Click on the links to view detailed documentation for each category.
 
 ## Default
 

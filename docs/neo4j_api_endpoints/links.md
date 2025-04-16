@@ -1,0 +1,513 @@
+# Link API
+
+This document provides detailed information about the links-related API endpoints available in the Constellation project.
+
+## Base
+
+### Get all links
+
+#### GET `/constellation/{constellation_uuid}/links`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "start_node": 1,
+      "end_node": 2,
+      "type": "example_type",
+      "attributes": {
+        "link_uuid": 1
+      }
+    }
+  ],
+  "message": "All links successfully returned"
+}
+```
+
+### Get all links to/from a specific node
+
+#### GET `/constellation/{constellation_uuid}/link/node/{node_uuid}`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+- `node_uuid` (path): The unique identifier of the node.
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "start_node": 1,
+      "end_node": 2,
+      "type": "example_type",
+      "attributes": {
+        "link_uuid": 1
+      }
+    }
+  ],
+  "message": "All links successfully returned"
+}
+```
+
+### Get a link by UUID
+
+#### GET `/constellation/{constellation_uuid}/link/{link_uuid}`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+- `link_uuid` (path): The unique identifier of the link.
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "start_node": 1,
+      "end_node": 2,
+      "type": "example_type",
+      "attributes": {
+        "link_uuid": 1
+      }
+    }
+  ],
+  "message": "Link successfully returned"
+}
+```
+
+### Create a new link
+
+#### POST `/constellation/{constellation_uuid}/link`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+
+***Request Body:**
+
+- `start_node` (body): The UUID of the start node.
+- `end_node` (body): The UUID of the end node.
+- `link_type` (body): The type of the link.
+
+```json
+{
+    "start_node": "0000-000000...",
+    "end_node": "0000-000000...",
+    "link_type": "string"
+}
+```
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "start_node": 1,
+      "end_node": 2,
+      "type": "example_type",
+      "attributes": {
+        "link_uuid": 1
+      }
+    }
+  ],
+  "message": "Link successfully created"
+}
+```
+
+### Delete a link
+
+#### DELETE `/constellation/{constellation_uuid}/link`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+
+***Request Body:**
+
+- `start_node` (body): The UUID of the start node.
+- `end_node` (body): The UUID of the end node.
+- `link_type` (body): The type of the link.
+
+```json
+{
+    "start_node": "0000-000000...",
+    "end_node": "0000-000000...",
+    "link_type": "string"
+}
+```
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "message": "Link successfully deleted"
+}
+```
+
+### Update a link
+
+#### PATCH `/constellation/{constellation_uuid}/link`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+
+***Request Body:**
+
+- `start_node` (body): The UUID of the start node.
+- `end_node` (body): The UUID of the end node.
+- `link_type` (body): The type of the link.
+- `new_link_type` (body): The new type of the link.
+
+```json
+{
+    "start_node": "0000-000000...",
+    "end_node": "0000-000000...",
+    "link_type": "string",
+    "new_link_type": "string"
+}
+```
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "start_node": 1,
+      "end_node": 2,
+      "type": "example_type",
+      "attributes": {
+        "link_uuid": 1
+      }
+    }
+  ],
+  "message": "Link successfully updated"
+}
+```
+
+## Attributes
+
+### Get all attributes of a specific link
+
+#### GET `/constellation/{constellation_uuid}/link/{link_uuid}/attributes`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+- `link_uuid` (path): The unique identifier of the link.
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    [
+      "attribute1",
+      "attribute2",
+      "attribute3"
+    ]
+  ],
+  "message": "Attributes retrieved"
+}
+```
+
+### Get the value of a specific attribute of a specific link
+
+#### GET `/constellation/{constellation_uuid}/link/{link_uuid}/attribute/{attribute}`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+- `link_uuid` (path): The unique identifier of the link.
+- `attribute` (path): The name of the attribute.
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    "value1",
+    "value2",
+    "value3"
+  ],
+  "message": "Attribute retrieved"
+}
+```
+
+### Set the value of a specific attribute of a specific link
+
+#### PATCH `/constellation/{constellation_uuid}/link/{link_uuid}/attribute/{attribute}`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+- `link_uuid` (path): The unique identifier of the link.
+- `attribute` (path): The name of the attribute.
+
+**Request Body:**
+
+- `value` (body): The new value for the attribute.
+
+```json
+{
+    "value": "new_value"
+}
+```
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "start_node": 1,
+      "end_node": 2,
+      "type": "LINK",
+      "attributes": {
+        "link_uuid": 1,
+        "attribute": "value"
+      }
+    }
+  ],
+  "message": "Attribute updated"
+}
+```
+
+### Delete a specific attribute of a specific link
+
+#### DELETE `/constellation/{constellation_uuid}/link/{link_uuid}/attribute/{attribute}`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+- `link_uuid` (path): The unique identifier of the link.
+- `attribute` (path): The name of the attribute.
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "start_node": 1,
+      "end_node": 2,
+      "type": "LINK",
+      "attributes": {
+        "link_uuid": 1,
+        "attribute": "value"
+      }
+    }
+  ],
+  "message": "Attribute deleted"
+}
+```
+
+### Add a new attribute to a link
+
+#### POST `/constellation/{constellation_uuid}/link/{link_uuid}/attribute/{attribute}`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+- `link_uuid` (path): The unique identifier of the link.
+- `attribute` (path): The name of the attribute.
+
+**Request Body:**
+
+- `value` (body): The value for the attribute.
+
+```json
+{
+    "value": "new_value"
+}
+```
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "start_node": 1,
+      "end_node": 2,
+      "type": "LINK",
+      "attributes": {
+        "link_uuid": 1,
+        "attribute": "value"
+      }
+    }
+  ],
+  "message": "Attribute added"
+}
+```
+
+### Get all links with a specific attribute
+
+#### GET `/constellation/{constellation_uuid}/links/attribute/{attribute}`
+
+**Request Parameters:**
+
+- `constellation_uuid` (path): The unique identifier of the constellation.
+- `attribute` (path): The name of the attribute.
+
+**Response:**
+
+- `200 OK`: Returns user details.
+- `401 Unauthorized`: User not authorized.
+- `403 Forbidden`: User does not have permission to access the constellation.
+- `404 Not Found`: Constellation not found.
+- `500 Internal Server Error`: An error occurred while retrieving links.
+
+**Response Example:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "start_node": 1,
+      "end_node": 2,
+      "type": "LINK",
+      "attributes": {
+        "link_uuid": 1,
+        "attribute": "value"
+      }
+    }
+  ],
+  "message": "Links retrieved"
+}
+```
+
+<!--
+Format Example:
+
+## Get a User by ID
+
+### GET `/users/{user_uuid}`
+Retrieve a user by their ID.
+
+**Request Parameters:**
+- `user_uuid` (path): The unique identifier of the user.
+
+**Response:**
+- `200 OK`: Returns user details.
+- `404 Not Found`: User not found.
+
+**Response Example**
+```json
+{
+    "uuid": "0000-000000...",
+    "name": "string",
+    "email": "string"
+}
+``` -->
