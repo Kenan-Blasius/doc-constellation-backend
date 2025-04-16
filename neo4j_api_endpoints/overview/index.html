@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../users/">
+        <link rel="prev" href="../../database_schema/indexes/">
       
       
-        <link rel="next" href="../files/">
+        <link rel="next" href="../nodes/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Constellations Endpoints - Constellation-Back-End-Documentation</title>
+        <title>Overview - Constellation-Back-End-Documentation</title>
       
     
     
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#constellations-api" class="md-skip">
+        <a href="#neo4j-api-endpoints-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Constellations Endpoints
+              Overview
             
           </span>
         </div>
@@ -298,12 +298,32 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../overview/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
     
   
-  API Endpoints
+  Neo4j API Endpoints
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../postgres_api_endpoints/overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Postgres API Endpoints
 
         </a>
       </li>
@@ -804,12 +824,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -824,7 +838,7 @@
             
   
   <span class="md-ellipsis">
-    API Endpoints
+    Neo4j API Endpoints
   </span>
   
 
@@ -834,49 +848,9 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            API Endpoints
+            Neo4j API Endpoints
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../users/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Users Endpoints
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -897,7 +871,7 @@
           
   
   <span class="md-ellipsis">
-    Constellations Endpoints
+    Overview
   </span>
   
 
@@ -908,7 +882,7 @@
         
   
   <span class="md-ellipsis">
-    Constellations Endpoints
+    Overview
   </span>
   
 
@@ -930,30 +904,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#authentication" class="md-nav__link">
-    Authentication
+  <a href="#default" class="md-nav__link">
+    Default
   </a>
   
-    <nav class="md-nav" aria-label="Authentication">
+    <nav class="md-nav" aria-label="Default">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#obtaining-a-jwt-token" class="md-nav__link">
-    Obtaining a JWT Token
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-request-with-jwt-token" class="md-nav__link">
-    Example Request with JWT Token
+  <a href="#root" class="md-nav__link">
+    Root
   </a>
   
 </li>
@@ -964,182 +924,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-all-constellations-linked-to-the-user" class="md-nav__link">
-    Get All Constellations Linked to the User
+  <a href="#nodes" class="md-nav__link">
+    Nodes
   </a>
-  
-    <nav class="md-nav" aria-label="Get All Constellations Linked to the User">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellations" class="md-nav__link">
-    GET /constellations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-new-constellation" class="md-nav__link">
-    Create a New Constellation
+  <a href="#links" class="md-nav__link">
+    Links
   </a>
-  
-    <nav class="md-nav" aria-label="Create a New Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post-constellations" class="md-nav__link">
-    POST /constellations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-a-constellation-by-its-id" class="md-nav__link">
-    Get a Constellation by its ID
+  <a href="#debug" class="md-nav__link">
+    Debug
   </a>
-  
-    <nav class="md-nav" aria-label="Get a Constellation by its ID">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationsconstellation_uuid" class="md-nav__link">
-    GET /constellations/{constellation_uuid}
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#update-a-constellations-name" class="md-nav__link">
-    Update a Constellation's Name
-  </a>
-  
-    <nav class="md-nav" aria-label="Update a Constellation's Name">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#patch-constellationsconstellation_uuid" class="md-nav__link">
-    PATCH /constellations/{constellation_uuid}
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delete-a-constellation-by-its-id" class="md-nav__link">
-    Delete a Constellation by its ID
-  </a>
-  
-    <nav class="md-nav" aria-label="Delete a Constellation by its ID">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#delete-constellationsconstellation_uuid" class="md-nav__link">
-    DELETE /constellations/{constellation_uuid}
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-a-user-to-a-constellation" class="md-nav__link">
-    Connect a User to a Constellation
-  </a>
-  
-    <nav class="md-nav" aria-label="Connect a User to a Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post-constellationsconstellation_uuidconnect" class="md-nav__link">
-    POST /constellations/{constellation_uuid}/connect
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disconnect-a-user-from-a-constellation" class="md-nav__link">
-    Disconnect a User from a Constellation
-  </a>
-  
-    <nav class="md-nav" aria-label="Disconnect a User from a Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post-constellationsconstellation_uuiddisconnect" class="md-nav__link">
-    POST /constellations/{constellation_uuid}/disconnect
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-all-users-associated-with-a-constellation" class="md-nav__link">
-    Get All Users Associated with a Constellation
-  </a>
-  
-    <nav class="md-nav" aria-label="Get All Users Associated with a Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationsconstellation_uuidusers" class="md-nav__link">
-    GET /constellations/{constellation_uuid}/users
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-the-root-structure-of-a-constellation" class="md-nav__link">
-    Get the Root Structure of a Constellation
-  </a>
-  
-    <nav class="md-nav" aria-label="Get the Root Structure of a Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-structureconstellation_uuid" class="md-nav__link">
-    GET /structure/{constellation_uuid}
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1158,11 +959,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../files/" class="md-nav__link">
+      <a href="../nodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Files Endpoints
+    Node Endpoints
   </span>
   
 
@@ -1178,31 +979,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../images/" class="md-nav__link">
+      <a href="../links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Images Endpoints
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../comments/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Comments Endpoints
+    Link Endpoints
   </span>
   
 
@@ -1249,6 +1030,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1263,7 +1056,7 @@
             
   
   <span class="md-ellipsis">
-    Testing
+    Postgres API Endpoints
   </span>
   
 
@@ -1272,6 +1065,191 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Postgres API Endpoints
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres_api_endpoints/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres_api_endpoints/users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users Endpoints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres_api_endpoints/constellations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Constellations Endpoints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres_api_endpoints/files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files Endpoints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres_api_endpoints/images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Images Endpoints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres_api_endpoints/comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comments Endpoints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres_api_endpoints/debug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debug Endpoints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Testing
           </label>
@@ -1324,9 +1302,9 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1337,8 +1315,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Deployment
           </label>
@@ -1418,30 +1396,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#authentication" class="md-nav__link">
-    Authentication
+  <a href="#default" class="md-nav__link">
+    Default
   </a>
   
-    <nav class="md-nav" aria-label="Authentication">
+    <nav class="md-nav" aria-label="Default">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#obtaining-a-jwt-token" class="md-nav__link">
-    Obtaining a JWT Token
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-request-with-jwt-token" class="md-nav__link">
-    Example Request with JWT Token
+  <a href="#root" class="md-nav__link">
+    Root
   </a>
   
 </li>
@@ -1452,182 +1416,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-all-constellations-linked-to-the-user" class="md-nav__link">
-    Get All Constellations Linked to the User
+  <a href="#nodes" class="md-nav__link">
+    Nodes
   </a>
-  
-    <nav class="md-nav" aria-label="Get All Constellations Linked to the User">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellations" class="md-nav__link">
-    GET /constellations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-new-constellation" class="md-nav__link">
-    Create a New Constellation
+  <a href="#links" class="md-nav__link">
+    Links
   </a>
-  
-    <nav class="md-nav" aria-label="Create a New Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post-constellations" class="md-nav__link">
-    POST /constellations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-a-constellation-by-its-id" class="md-nav__link">
-    Get a Constellation by its ID
+  <a href="#debug" class="md-nav__link">
+    Debug
   </a>
-  
-    <nav class="md-nav" aria-label="Get a Constellation by its ID">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationsconstellation_uuid" class="md-nav__link">
-    GET /constellations/{constellation_uuid}
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#update-a-constellations-name" class="md-nav__link">
-    Update a Constellation's Name
-  </a>
-  
-    <nav class="md-nav" aria-label="Update a Constellation's Name">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#patch-constellationsconstellation_uuid" class="md-nav__link">
-    PATCH /constellations/{constellation_uuid}
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delete-a-constellation-by-its-id" class="md-nav__link">
-    Delete a Constellation by its ID
-  </a>
-  
-    <nav class="md-nav" aria-label="Delete a Constellation by its ID">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#delete-constellationsconstellation_uuid" class="md-nav__link">
-    DELETE /constellations/{constellation_uuid}
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-a-user-to-a-constellation" class="md-nav__link">
-    Connect a User to a Constellation
-  </a>
-  
-    <nav class="md-nav" aria-label="Connect a User to a Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post-constellationsconstellation_uuidconnect" class="md-nav__link">
-    POST /constellations/{constellation_uuid}/connect
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disconnect-a-user-from-a-constellation" class="md-nav__link">
-    Disconnect a User from a Constellation
-  </a>
-  
-    <nav class="md-nav" aria-label="Disconnect a User from a Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post-constellationsconstellation_uuiddisconnect" class="md-nav__link">
-    POST /constellations/{constellation_uuid}/disconnect
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-all-users-associated-with-a-constellation" class="md-nav__link">
-    Get All Users Associated with a Constellation
-  </a>
-  
-    <nav class="md-nav" aria-label="Get All Users Associated with a Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationsconstellation_uuidusers" class="md-nav__link">
-    GET /constellations/{constellation_uuid}/users
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-the-root-structure-of-a-constellation" class="md-nav__link">
-    Get the Root Structure of a Constellation
-  </a>
-  
-    <nav class="md-nav" aria-label="Get the Root Structure of a Constellation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-structureconstellation_uuid" class="md-nav__link">
-    GET /structure/{constellation_uuid}
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1649,210 +1454,20 @@
   
 
 
-<h1 id="constellations-api">Constellations API</h1>
-<p>This document provides detailed information about the constellation-related API endpoints available in the Constellation project.</p>
-<h2 id="authentication">Authentication</h2>
-<p>All API requests require authentication using a JWT bearer token. You must include the token in the <code>Authorization</code> header of your requests.</p>
-<h3 id="example">Example</h3>
-<p>To include the JWT token in your request headers, use the following format:</p>
-<div class="highlight"><pre><span></span><code>Authorization: Bearer &lt;your-jwt-token&gt;
-</code></pre></div>
-<h3 id="obtaining-a-jwt-token">Obtaining a JWT Token</h3>
-<p>You can obtain a JWT token by logging in with your credentials. The token will be included in the response from the login endpoint.</p>
-<h3 id="example-request-with-jwt-token">Example Request with JWT Token</h3>
-<p>Here is an example of how to include the JWT token in a request to the <code>/constellations</code> endpoint:</p>
-<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/constellations</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="o">:</span> <span class="l">api.example.com</span>
-<span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer &lt;your-jwt-token&gt;</span>
-</code></pre></div>
-<h2 id="get-all-constellations-linked-to-the-user">Get All Constellations Linked to the User</h2>
-<h3 id="get-constellations">GET <code>/constellations</code></h3>
-<p>Retrieve all constellations linked to the user.</p>
-<p><strong>Response:</strong>
-- <code>200 OK</code>: Returns a list of constellations.</p>
-<p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h2 id="create-a-new-constellation">Create a New Constellation</h2>
-<h3 id="post-constellations">POST <code>/constellations</code></h3>
-<p>Create a new constellation.</p>
-<blockquote>
-<p>[!NOTE]\
-You will have admin rights on the constellation you create.</p>
-</blockquote>
-<p><strong>Request Body:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Response:</strong>
-- <code>201 Created</code>: Constellation successfully created.
-- <code>400 Bad Request</code>: Invalid input data.</p>
-<p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h2 id="get-a-constellation-by-its-id">Get a Constellation by its ID</h2>
-<h3 id="get-constellationsconstellation_uuid">GET <code>/constellations/{constellation_uuid}</code></h3>
-<p>Retrieve a constellation by its ID.</p>
-<p><strong>Request Parameters:</strong>
-- <code>constellation_uuid</code> (path): The unique identifier of the constellation.</p>
-<p><strong>Response:</strong>
-- <code>200 OK</code>: Returns constellation details.
-- <code>400 Invalid constellation UUID</code>: Invalid constellation UUID.
-- <code>404 Not Found</code>: Constellation not found.</p>
-<p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;root_folder_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h2 id="update-a-constellations-name">Update a Constellation's Name</h2>
-<h3 id="patch-constellationsconstellation_uuid">PATCH <code>/constellations/{constellation_uuid}</code></h3>
-<p>Update a constellation's name.</p>
-<blockquote>
-<p>[!NOTE]\
-You must have write rights on the constellation to update its name.</p>
-</blockquote>
-<p><strong>Request Parameters:</strong>
-- <code>constellation_uuid</code> (path): The unique identifier of the constellation.</p>
-<p><strong>Request Body:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Response:</strong>
-- <code>200 OK</code>: Constellation name successfully updated.
-- <code>400 Invalid constellation UUID</code>: Invalid constellation UUID.
-- <code>404 Not Found</code>: Constellation not found.</p>
-<p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h2 id="delete-a-constellation-by-its-id">Delete a Constellation by its ID</h2>
-<h3 id="delete-constellationsconstellation_uuid">DELETE <code>/constellations/{constellation_uuid}</code></h3>
-<p>Delete a constellation by its ID.</p>
-<blockquote>
-<p>[!NOTE]\
-You must be an admin to access this endpoint</p>
-</blockquote>
-<p><strong>Request Parameters:</strong>
-- <code>constellation_uuid</code> (path): The unique identifier of the constellation.</p>
-<p><strong>Response:</strong>
-- <code>200 OK</code>: Constellation successfully deleted.
-- <code>400 Invalid constellation UUID</code>: Invalid constellation UUID.
-- <code>404 Not Found</code>: Constellation not found.</p>
-<p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Constellation deleted&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h2 id="connect-a-user-to-a-constellation">Connect a User to a Constellation</h2>
-<h3 id="post-constellationsconstellation_uuidconnect">POST <code>/constellations/{constellation_uuid}/connect</code></h3>
-<p>Connect a user to a constellation.</p>
-<blockquote>
-<p>[!NOTE]\
-You must have admin rights on the constellation to connect a user.</p>
-</blockquote>
-<p><strong>Request Parameters:</strong>
-- <code>constellation_uuid</code> (path): The unique identifier of the constellation.
-- <code>user_uuid_to_connect</code>: The unique identifier of the user
-- <code>rights</code>: could be 'READ', 'COMMENT', 'WRITE' or 'ADMIN'</p>
-<p><strong>Request Body:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;user_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Response:</strong>
-- <code>200 OK</code>: User successfully connected to the constellation.
-- <code>400 Bad Request</code>: Invalid input data.
-- <code>404 Not Found</code>: Constellation or user not found.</p>
-<p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User connected to constellation&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h2 id="disconnect-a-user-from-a-constellation">Disconnect a User from a Constellation</h2>
-<h3 id="post-constellationsconstellation_uuiddisconnect">POST <code>/constellations/{constellation_uuid}/disconnect</code></h3>
-<p>Disconnect a user from a constellation.</p>
-<blockquote>
-<p>[!NOTE]\
-You must have admin rights on the constellation to disconnect a user.</p>
-</blockquote>
-<p><strong>Request Parameters:</strong>
-- <code>constellation_uuid</code> (path): The unique identifier of the constellation.
-- <code>user_uuid_to_disconnect</code>: The unique identifier of the user
-- <code>rights</code>: could be 'READ', 'COMMENT', 'WRITE' or 'ADMIN'</p>
-<p><strong>Request Body:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;user_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Response:</strong>
-- <code>200 OK</code>: User successfully disconnected from the constellation.
-- <code>400 Bad Request</code>: Invalid input data.
-- <code>404 Not Found</code>: Constellation or user not found.</p>
-<p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User disconnected from constellation&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h2 id="get-all-users-associated-with-a-constellation">Get All Users Associated with a Constellation</h2>
-<h3 id="get-constellationsconstellation_uuidusers">GET <code>/constellations/{constellation_uuid}/users</code></h3>
-<p>Retrieve all users associated with a constellation.</p>
-<blockquote>
-<p>[!NOTE]\
-Everyone with at least read rights can access this endpoint.</p>
-</blockquote>
-<p><strong>Request Parameters:</strong>
-- <code>constellation_uuid</code> (path): The unique identifier of the constellation.</p>
-<p><strong>Response:</strong>
-- <code>200 OK</code>: Returns a list of users associated with the constellation.
-- <code>404 Not Found</code>: Constellation not found.</p>
-<p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">[</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;rights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">]</span>
-</code></pre></div></p>
-<h2 id="get-the-root-structure-of-a-constellation">Get the Root Structure of a Constellation</h2>
-<h3 id="get-structureconstellation_uuid">GET <code>/structure/{constellation_uuid}</code></h3>
-<p>Retrieve the root structure of a constellation.</p>
-<p><strong>Request Parameters:</strong>
-- <code>constellation_uuid</code> (path): The unique identifier of the constellation.</p>
-<p><strong>Response:</strong>
-- <code>200 OK</code>: Returns the root structure of the constellation.
-- <code>404 Not Found</code>: Constellation not found.</p>
-<p><strong>Response Example</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;folder&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;children&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;folder&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;children&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="p">]</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div></p>
+<h1 id="neo4j-api-endpoints-overview">Neo4j API Endpoints Overview</h1>
+<p>This document provides an overview of the API endpoints available in the Constellation project. Each endpoint is categorized based on its functionality. Click on the links to view detailed documentation for each category.</p>
+<h2 id="default">Default</h2>
+<h3 id="root">Root</h3>
+<ul>
+<li><strong>GET</strong> <code>/</code></li>
+<li>Root endpoint</li>
+</ul>
+<h2 id="nodes">Nodes</h2>
+<p>For detailed information about nodes-related endpoints, see the <a href="../nodes/">Node API</a> documentation.</p>
+<h2 id="links">Links</h2>
+<p>For detailed information about links-related endpoints, see the <a href="../links/">Link API</a> documentation.</p>
+<h2 id="debug">Debug</h2>
+<p>For detailed information about debug-related endpoints, see the <a href="../debug/">Debug API</a> documentation.</p>
 
 
 
