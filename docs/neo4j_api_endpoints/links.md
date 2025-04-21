@@ -8,6 +8,10 @@ This document provides detailed information about the links-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/links`
 
+**Description:**
+
+Retrieve all links in a constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -42,6 +46,10 @@ This document provides detailed information about the links-related API endpoint
 ### Get all links to/from a specific node
 
 #### GET `/constellation/{constellation_uuid}/link/node/{node_uuid}`
+
+**Description:**
+
+Retrieve all links to/from a specific node in a constellation.
 
 **Request Parameters:**
 
@@ -79,6 +87,10 @@ This document provides detailed information about the links-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/link/{link_uuid}`
 
+**Description:**
+
+Retrieve a link by its UUID in a constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -114,6 +126,10 @@ This document provides detailed information about the links-related API endpoint
 ### Create a new link
 
 #### POST `/constellation/{constellation_uuid}/link`
+
+**Description:**
+
+Create a new link in a constellation.
 
 **Request Parameters:**
 
@@ -164,6 +180,10 @@ This document provides detailed information about the links-related API endpoint
 
 #### DELETE `/constellation/{constellation_uuid}/link`
 
+**Description:**
+
+Delete a link in a constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -202,6 +222,10 @@ This document provides detailed information about the links-related API endpoint
 ### Update a link
 
 #### PATCH `/constellation/{constellation_uuid}/link`
+
+**Description:**
+
+Update a link in a constellation.
 
 **Request Parameters:**
 
@@ -256,6 +280,10 @@ This document provides detailed information about the links-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/link/{link_uuid}/attributes`
 
+**Description:**
+
+Retrieve all attributes keys of a specific link in a constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -289,6 +317,10 @@ This document provides detailed information about the links-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/link/{link_uuid}/attribute/{attribute}`
 
+**Description:**
+
+Retrieve the value of a specific attribute of a specific link in a constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -320,6 +352,10 @@ This document provides detailed information about the links-related API endpoint
 ### Set the value of a specific attribute of a specific link
 
 #### PATCH `/constellation/{constellation_uuid}/link/{link_uuid}/attribute/{attribute}`
+
+**Description:**
+
+Set the value of a specific attribute of a specific link in a constellation.
 
 **Request Parameters:**
 
@@ -369,6 +405,10 @@ This document provides detailed information about the links-related API endpoint
 
 #### DELETE `/constellation/{constellation_uuid}/link/{link_uuid}/attribute/{attribute}`
 
+**Description:**
+
+Delete a specific attribute of a specific link in a constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -406,6 +446,10 @@ This document provides detailed information about the links-related API endpoint
 ### Add a new attribute to a link
 
 #### POST `/constellation/{constellation_uuid}/link/{link_uuid}/attribute/{attribute}`
+
+**Description:**
+
+Add a new attribute to a link in a constellation.
 
 **Request Parameters:**
 
@@ -454,6 +498,10 @@ This document provides detailed information about the links-related API endpoint
 ### Get all links with a specific attribute
 
 #### GET `/constellation/{constellation_uuid}/links/attribute/{attribute}`
+
+**Description:**
+
+Retrieve all links with a specific attribute key in a constellation.
 
 **Request Parameters:**
 

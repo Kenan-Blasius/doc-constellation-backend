@@ -8,6 +8,11 @@ As it's debug-related, it doesn't require authentication.
 
 ### GET `/nodes`
 
+**Description:**
+This endpoint retrieves all nodes in the database. It is primarily used for debugging and testing purposes.
+It returns a list of all nodes along with their attributes and labels.
+This endpoint is not intended for production use.
+
 **Response:**
 
 - `200 OK`: Returns all nodes in the database.
@@ -38,6 +43,12 @@ As it's debug-related, it doesn't require authentication.
 
 ### GET `/links`
 
+**Description:**
+
+This endpoint retrieves all links in the database. It is primarily used for debugging and testing purposes.
+It returns a list of all links along with their attributes and types.
+This endpoint is not intended for production use.
+
 **Response:**
 
 - `200 OK`: Returns all links in the database.
@@ -66,6 +77,12 @@ As it's debug-related, it doesn't require authentication.
 
 ### GET `/reset`
 
+**Description:**
+
+This endpoint resets the database by deleting all nodes and links. It is primarily used for debugging and testing purposes.
+It is important to note that this action is irreversible and will remove all data from the database.
+This endpoint is not intended for production use and should be used with caution.
+
 **Response:**
 
 - `200 OK`: Returns all links in the database.
@@ -83,6 +100,12 @@ As it's debug-related, it doesn't require authentication.
 ## Populate the database
 
 ### GET `/populate`
+
+**Description:**
+
+This endpoint populates the database with sample data using a cypher file. It is primarily used for debugging and testing purposes.
+It is important to note that this action is irreversible and will remove all existing data from the database.
+This endpoint is not intended for production use and should be used with caution.
 
 **Response:**
 

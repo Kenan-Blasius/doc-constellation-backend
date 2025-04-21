@@ -8,6 +8,10 @@ This document provides detailed information about the nodes-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/nodes`
 
+**Description:**
+
+Retrieve all nodes in a constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -44,6 +48,10 @@ This document provides detailed information about the nodes-related API endpoint
 ### Get a node by UUID
 
 #### GET `/constellation/{constellation_uuid}/node/{node_uuid}`
+
+**Description:**
+
+Retrieve a node by its UUID.
 
 **Request Parameters:**
 
@@ -82,6 +90,10 @@ This document provides detailed information about the nodes-related API endpoint
 ### Update a node
 
 #### PATCH `/constellation/{constellation_uuid}/node/{node_uuid}`
+
+**Description:**
+
+Update a node by its UUID.
 
 **Request Parameters:**
 
@@ -131,6 +143,10 @@ This document provides detailed information about the nodes-related API endpoint
 
 #### DELETE `/constellation/{constellation_uuid}/node/{node_uuid}`
 
+**Description:**
+
+Delete a node by its UUID.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -156,6 +172,10 @@ This document provides detailed information about the nodes-related API endpoint
 ### Create a new node
 
 #### POST `/constellation/{constellation_uuid}/node`
+
+**Description:**
+
+Create a new node in the constellation.
 
 **Request Parameters:**
 
@@ -206,6 +226,10 @@ This document provides detailed information about the nodes-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/attributes`
 
+**Description:**
+
+Retrieve all attributes keys from every node in the constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -235,6 +259,10 @@ This document provides detailed information about the nodes-related API endpoint
 ### Get all attributes of a node
 
 #### GET `/constellation/{constellation_uuid}/node/{node_uuid}/attributes`
+
+**Description:**
+
+Retrieve all attributes keys of a node.
 
 **Request Parameters:**
 
@@ -267,6 +295,10 @@ This document provides detailed information about the nodes-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/node/{node_uuid}/attribute/{attribute}`
 
+**Description:**
+
+Retrieve the value of a specific attribute of a node.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -296,6 +328,10 @@ This document provides detailed information about the nodes-related API endpoint
 ### Set the value of a specific attribute of a node
 
 #### PATCH `/constellation/{constellation_uuid}/node/{node_uuid}/attribute/{attribute}`
+
+**Description:**
+
+Set the value of a specific attribute of a node.
 
 **Request Parameters:**
 
@@ -346,6 +382,10 @@ This document provides detailed information about the nodes-related API endpoint
 
 #### DELETE `/constellation/{constellation_uuid}/node/{node_uuid}/attribute/{attribute}`
 
+**Description:**
+
+Delete a specific attribute of a node.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -384,6 +424,10 @@ This document provides detailed information about the nodes-related API endpoint
 ### Add an attribute to a node
 
 #### POST `/constellation/{constellation_uuid}/node/{node_uuid}/attribute/{attribute}`
+
+**Description:**
+
+Add an attribute to a node.
 
 **Request Parameters:**
 
@@ -434,6 +478,10 @@ This document provides detailed information about the nodes-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/nodes/attribute/{attribute}`
 
+**Description:**
+
+Retrieve all nodes with a specific attribute key in the constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -474,6 +522,10 @@ This document provides detailed information about the nodes-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/labels`
 
+**Description:**
+
+Retrieve all labels from every node in the constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -504,6 +556,10 @@ This document provides detailed information about the nodes-related API endpoint
 ### Get all labels of a node
 
 #### GET `/constellation/{constellation_uuid}/node/{node_uuid}/labels`
+
+**Description:**
+
+Retrieve all labels of a node.
 
 **Request Parameters:**
 
@@ -536,6 +592,10 @@ This document provides detailed information about the nodes-related API endpoint
 ### Remove all labels from a node
 
 #### DELETE `/constellation/{constellation_uuid}/node/{node_uuid}/labels`
+
+**Description:**
+
+Remove all labels from a node.
 
 **Request Parameters:**
 
@@ -575,6 +635,10 @@ This document provides detailed information about the nodes-related API endpoint
 
 #### GET `/constellation/{constellation_uuid}/nodes/label/{label}`
 
+**Description:**
+
+Retrieve all nodes with a specific label in the constellation.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -612,6 +676,10 @@ This document provides detailed information about the nodes-related API endpoint
 ### Add a label to a node
 
 #### POST `/constellation/{constellation_uuid}/node/{node_uuid}/label/{label}`
+
+**Description:**
+
+Add a label to a node.
 
 **Request Parameters:**
 
@@ -652,6 +720,10 @@ This document provides detailed information about the nodes-related API endpoint
 
 #### DELETE `/constellation/{constellation_uuid}/node/{node_uuid}/label/{label}`
 
+**Description:**
+
+Remove a label from a node.
+
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
@@ -686,27 +758,3 @@ This document provides detailed information about the nodes-related API endpoint
   "message": "Label successfully removed"
 }
 ```
-
-<!--
-Format Example:
-
-## Get a User by ID
-
-### GET `/users/{user_uuid}`
-Retrieve a user by their ID.
-
-**Request Parameters:**
-- `user_uuid` (path): The unique identifier of the user.
-
-**Response:**
-- `200 OK`: Returns user details.
-- `404 Not Found`: User not found.
-
-**Response Example**
-```json
-{
-    "uuid": "0000-000000...",
-    "name": "string",
-    "email": "string"
-}
-``` -->
