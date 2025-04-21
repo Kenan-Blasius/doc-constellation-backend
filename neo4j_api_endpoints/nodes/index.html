@@ -2175,6 +2175,8 @@
 <h2 id="base">Base</h2>
 <h3 id="get-all-nodes">Get all nodes</h3>
 <h4 id="get-constellationconstellation_uuidnodes">GET <code>/constellation/{constellation_uuid}/nodes</code></h4>
+<p><strong>Description:</strong></p>
+<p>Retrieve all nodes in a constellation.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2207,6 +2209,8 @@
 </code></pre></div>
 <h3 id="get-a-node-by-uuid">Get a node by UUID</h3>
 <h4 id="get-constellationconstellation_uuidnodenode_uuid">GET <code>/constellation/{constellation_uuid}/node/{node_uuid}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Retrieve a node by its UUID.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2240,6 +2244,8 @@
 </code></pre></div>
 <h3 id="update-a-node">Update a node</h3>
 <h4 id="patch-constellationconstellation_uuidnodenode_uuid">PATCH <code>/constellation/{constellation_uuid}/node/{node_uuid}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Update a node by its UUID.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2280,6 +2286,8 @@
 </code></pre></div>
 <h3 id="delete-a-node">Delete a node</h3>
 <h4 id="delete-constellationconstellation_uuidnodenode_uuid">DELETE <code>/constellation/{constellation_uuid}/node/{node_uuid}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Delete a node by its UUID.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2301,6 +2309,8 @@
 </code></pre></div>
 <h3 id="create-a-new-node">Create a new node</h3>
 <h4 id="post-constellationconstellation_uuidnode">POST <code>/constellation/{constellation_uuid}/node</code></h4>
+<p><strong>Description:</strong></p>
+<p>Create a new node in the constellation.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2341,6 +2351,8 @@
 <h2 id="attributes">Attributes</h2>
 <h3 id="get-all-attributes-in-the-constellation">Get all attributes in the constellation</h3>
 <h4 id="get-constellationconstellation_uuidattributes">GET <code>/constellation/{constellation_uuid}/attributes</code></h4>
+<p><strong>Description:</strong></p>
+<p>Retrieve all attributes keys from every node in the constellation.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2366,6 +2378,8 @@
 </code></pre></div>
 <h3 id="get-all-attributes-of-a-node">Get all attributes of a node</h3>
 <h4 id="get-constellationconstellation_uuidnodenode_uuidattributes">GET <code>/constellation/{constellation_uuid}/node/{node_uuid}/attributes</code></h4>
+<p><strong>Description:</strong></p>
+<p>Retrieve all attributes keys of a node.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2392,6 +2406,8 @@
 </code></pre></div>
 <h3 id="get-the-value-of-a-specific-attribute-of-a-node">Get the value of a specific attribute of a node</h3>
 <h4 id="get-constellationconstellation_uuidnodenode_uuidattributeattribute">GET <code>/constellation/{constellation_uuid}/node/{node_uuid}/attribute/{attribute}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Retrieve the value of a specific attribute of a node.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2417,6 +2433,8 @@
 </code></pre></div>
 <h3 id="set-the-value-of-a-specific-attribute-of-a-node">Set the value of a specific attribute of a node</h3>
 <h4 id="patch-constellationconstellation_uuidnodenode_uuidattributeattribute">PATCH <code>/constellation/{constellation_uuid}/node/{node_uuid}/attribute/{attribute}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Set the value of a specific attribute of a node.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2459,6 +2477,8 @@
 </code></pre></div>
 <h3 id="delete-a-specific-attribute-of-a-node">Delete a specific attribute of a node</h3>
 <h4 id="delete-constellationconstellation_uuidnodenode_uuidattributeattribute">DELETE <code>/constellation/{constellation_uuid}/node/{node_uuid}/attribute/{attribute}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Delete a specific attribute of a node.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2493,6 +2513,8 @@
 </code></pre></div>
 <h3 id="add-an-attribute-to-a-node">Add an attribute to a node</h3>
 <h4 id="post-constellationconstellation_uuidnodenode_uuidattributeattribute">POST <code>/constellation/{constellation_uuid}/node/{node_uuid}/attribute/{attribute}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Add an attribute to a node.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2535,6 +2557,8 @@
 </code></pre></div>
 <h3 id="get-all-nodes-with-a-specific-attribute">Get all nodes with a specific attribute</h3>
 <h4 id="get-constellationconstellation_uuidnodesattributeattribute">GET <code>/constellation/{constellation_uuid}/nodes/attribute/{attribute}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Retrieve all nodes with a specific attribute key in the constellation.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2569,6 +2593,8 @@
 <h2 id="labels">Labels</h2>
 <h3 id="get-all-labels-in-the-constellation">Get all labels in the constellation</h3>
 <h4 id="get-constellationconstellation_uuidlabels">GET <code>/constellation/{constellation_uuid}/labels</code></h4>
+<p><strong>Description:</strong></p>
+<p>Retrieve all labels from every node in the constellation.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2595,6 +2621,8 @@
 </code></pre></div>
 <h3 id="get-all-labels-of-a-node">Get all labels of a node</h3>
 <h4 id="get-constellationconstellation_uuidnodenode_uuidlabels">GET <code>/constellation/{constellation_uuid}/node/{node_uuid}/labels</code></h4>
+<p><strong>Description:</strong></p>
+<p>Retrieve all labels of a node.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2622,6 +2650,8 @@
 </code></pre></div>
 <h3 id="remove-all-labels-from-a-node">Remove all labels from a node</h3>
 <h4 id="delete-constellationconstellation_uuidnodenode_uuidlabels">DELETE <code>/constellation/{constellation_uuid}/node/{node_uuid}/labels</code></h4>
+<p><strong>Description:</strong></p>
+<p>Remove all labels from a node.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2655,6 +2685,8 @@
 </code></pre></div>
 <h3 id="get-all-nodes-with-a-label">Get all nodes with a label</h3>
 <h4 id="get-constellationconstellation_uuidnodeslabellabel">GET <code>/constellation/{constellation_uuid}/nodes/label/{label}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Retrieve all nodes with a specific label in the constellation.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2688,6 +2720,8 @@
 </code></pre></div>
 <h3 id="add-a-label-to-a-node">Add a label to a node</h3>
 <h4 id="post-constellationconstellation_uuidnodenode_uuidlabellabel">POST <code>/constellation/{constellation_uuid}/node/{node_uuid}/label/{label}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Add a label to a node.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2722,6 +2756,8 @@
 </code></pre></div>
 <h3 id="remove-a-label-from-a-node">Remove a label from a node</h3>
 <h4 id="delete-constellationconstellation_uuidnodenode_uuidlabellabel">DELETE <code>/constellation/{constellation_uuid}/node/{node_uuid}/label/{label}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Remove a label from a node.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
@@ -2754,29 +2790,6 @@
 <span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Label successfully removed&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-<!--
-Format Example:
-
-## Get a User by ID
-
-### GET `/users/{user_uuid}`
-Retrieve a user by their ID.
-
-**Request Parameters:**
-- `user_uuid` (path): The unique identifier of the user.
-
-**Response:**
-- `200 OK`: Returns user details.
-- `404 Not Found`: User not found.
-
-**Response Example**
-```json
-{
-    "uuid": "0000-000000...",
-    "name": "string",
-    "email": "string"
-}
-``` -->
 
 
 

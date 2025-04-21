@@ -1538,6 +1538,10 @@ All the debug endpoints are used for testing and debugging purposes only, and ar
 As it's debug-related, it doesn't require authentication.</p>
 <h2 id="get-all-nodes">Get all nodes</h2>
 <h3 id="get-nodes">GET <code>/nodes</code></h3>
+<p><strong>Description:</strong>
+This endpoint retrieves all nodes in the database. It is primarily used for debugging and testing purposes.
+It returns a list of all nodes along with their attributes and labels.
+This endpoint is not intended for production use.</p>
 <p><strong>Response:</strong></p>
 <ul>
 <li><code>200 OK</code>: Returns all nodes in the database.</li>
@@ -1563,6 +1567,10 @@ As it's debug-related, it doesn't require authentication.</p>
 </code></pre></div>
 <h2 id="get-all-links">Get all links</h2>
 <h3 id="get-links">GET <code>/links</code></h3>
+<p><strong>Description:</strong></p>
+<p>This endpoint retrieves all links in the database. It is primarily used for debugging and testing purposes.
+It returns a list of all links along with their attributes and types.
+This endpoint is not intended for production use.</p>
 <p><strong>Response:</strong></p>
 <ul>
 <li><code>200 OK</code>: Returns all links in the database.</li>
@@ -1586,6 +1594,10 @@ As it's debug-related, it doesn't require authentication.</p>
 </code></pre></div>
 <h2 id="reset-the-database">Reset the database</h2>
 <h3 id="get-reset">GET <code>/reset</code></h3>
+<p><strong>Description:</strong></p>
+<p>This endpoint resets the database by deleting all nodes and links. It is primarily used for debugging and testing purposes.
+It is important to note that this action is irreversible and will remove all data from the database.
+This endpoint is not intended for production use and should be used with caution.</p>
 <p><strong>Response:</strong></p>
 <ul>
 <li><code>200 OK</code>: Returns all links in the database.</li>
@@ -1599,6 +1611,10 @@ As it's debug-related, it doesn't require authentication.</p>
 </code></pre></div>
 <h2 id="populate-the-database">Populate the database</h2>
 <h3 id="get-populate">GET <code>/populate</code></h3>
+<p><strong>Description:</strong></p>
+<p>This endpoint populates the database with sample data using a cypher file. It is primarily used for debugging and testing purposes.
+It is important to note that this action is irreversible and will remove all existing data from the database.
+This endpoint is not intended for production use and should be used with caution.</p>
 <p><strong>Response:</strong></p>
 <ul>
 <li><code>200 OK</code>: Returns all links in the database.</li>
