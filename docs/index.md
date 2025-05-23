@@ -4,6 +4,14 @@ Welcome to the Constellation Backend API documentation. This documentation provi
 
 ## Table of Contents
 
+### Neo4j API Endpoints
+
+- [Nodes API](neo4j_api_endpoints/nodes.md)
+- [Links API](neo4j_api_endpoints/links.md)
+- [Neo4j Debug API](neo4j_api_endpoints/debug.md)
+
+### Postgres API Endpoints
+
 - [Users API](postgres_api_endpoints/users.md)
 - [Files and Folders API](postgres_api_endpoints/files.md)
 - [Images API](postgres_api_endpoints/images.md)
@@ -11,9 +19,12 @@ Welcome to the Constellation Backend API documentation. This documentation provi
 - [Constellations API](postgres_api_endpoints/constellations.md)
 - [Structure API](postgres_api_endpoints/structure.md)
 - [Postgres Debug API](postgres_api_endpoints/debug.md)
-- [Nodes API](neo4j_api_endpoints/nodes.md)
-- [Links API](neo4j_api_endpoints/links.md)
-- [Neo4j Debug API](neo4j_api_endpoints/debug.md)
+
+### SSE API Endpoints
+
+### CRDT Server
+
+- [CRDT Server](crdt_server/overview.md)
 
 Each section contains detailed information about the request parameters, request body, response, and response examples for the respective API endpoints.
 

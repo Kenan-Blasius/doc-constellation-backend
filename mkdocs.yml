@@ -89,6 +89,8 @@ nav:
       - Images Endpoints: postgres_api_endpoints/images.md
       - Comments Endpoints: postgres_api_endpoints/comments.md
       - Debug Endpoints: postgres_api_endpoints/debug.md
+  - CRDT Server:
+      - Overview: crdt_server/overview.md
   - Testing:
       - Overview: testing/overview.md
       # - Unit Tests: testing/unit_tests.md
