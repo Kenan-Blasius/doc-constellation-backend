@@ -1246,6 +1246,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#information" class="md-nav__link">
+    Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-use-the-crdt-server" class="md-nav__link">
     How to use the CRDT server
   </a>
@@ -1447,6 +1454,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#information" class="md-nav__link">
+    Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-use-the-crdt-server" class="md-nav__link">
     How to use the CRDT server
   </a>
@@ -1473,14 +1487,19 @@
 
 <h1 id="crdt-server-overview">CRDT Server Overview</h1>
 <p>This document provides an overview of how to use the CRDT server in the Constellation project.</p>
+<h2 id="information">Information</h2>
+<p>The CRDT server uses <a href="https://hocuspocus.dev/">hocuspocus</a> for real-time collaboration and synchronization.</p>
+<p>The CRDT Server was made to be used with the <a href="https://platejs.org/">platejs</a> library, which provides a rich text editor with collaborative features and manages the Yjs documents internally.</p>
+<p>For more information on how to use the CRDT server, you can refer to the <a href="https://hocuspocus.dev/docs/">hocuspocus documentation</a> and the <a href="https://platejs.org/docs/">platejs documentation</a>.</p>
 <h2 id="how-to-use-the-crdt-server">How to use the CRDT server</h2>
+<p>To use the CRDT server, follow these steps:</p>
 <ol>
-<li>
-<p><strong>Start the CRDT server</strong>: The CRDT server is a separate process that needs to be started before you can use it. You can start the server by running the following command:</p>
-</li>
-<li>
-<p><strong>Set the room name</strong>: The CRDT server uses rooms to organize data. You need to set the room name before you can use the server. You can set the room name using the following code:</p>
-</li>
+<li><strong>Start the CRDT server</strong>: The CRDT server is a separate service that needs to be started before you can use it. You can start the server by starting the docker compose file located at the root of the project. The command to start the server is:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
+</code></pre></div>
+<ol>
+<li><strong>Set the room name</strong>: The CRDT server uses rooms to organize data. You need to set the room name before you can use the server. You can set the room name using the following code:</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1">// The room name should be formed as: postgres/&lt;constellation_uuid&gt;/&lt;file_uuid&gt; or neo4j/&lt;constellation_uuid&gt;/&lt;node_uuid&gt;/&lt;attribute_name&gt;</span>
 <span class="w"> </span><span class="c1">// For example, if you are using PostgreSQL and your constellation UUID is &quot;1234&quot; and your file UUID is &quot;5678&quot;, the room name would be:</span>
@@ -1489,70 +1508,21 @@
 <span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">roomname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`neo4j/1234/5678/story`</span>
 </code></pre></div>
 <ol>
-<li><strong>Install the Yjs library</strong>: The CRDT server uses the Yjs library to handle the synchronization of data. You need to install the Yjs library in your project. You can install it using npm:</li>
+<li><strong>Set the JWT token</strong>: The CRDT server requires a JWT token to authenticate the user. You can set the JWT token in the providers options when using platejs.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>yjs<span class="w"> </span>y-websocket
-</code></pre></div>
-<ol>
-<li><strong>Import the Yjs library</strong>: Once you have installed the Yjs library, you need to import it in your project. You can import it using the following code:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">Y</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;yjs&#39;</span>
-<span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">WebsocketProvider</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;y-websocket&#39;</span>
-</code></pre></div>
-<ol>
-<li><strong>Create a Yjs document</strong>: You need to create a Yjs document to hold your data. You can create a Yjs document using the following code:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">ydoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Y</span><span class="p">.</span><span class="nx">Doc</span><span class="p">()</span>
-</code></pre></div>
-<ol>
-<li><strong>Set the JWT token</strong>: The CRDT server requires a JWT token to authenticate the user. You can set the JWT token in the <code>Authorization</code> header of the WebSocket connection. You can use the following code to set the JWT token:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">jwt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1">// get the JWT token from your authentication system</span>
-<span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Authorization=</span><span class="si">${</span><span class="nx">jwt</span><span class="si">}</span><span class="sb">;`</span>
-</code></pre></div>
-<ol>
-<li><strong>Connect to the CRDT server</strong>: Once the server is running, you can connect to it using a WebSocket client. The server listens on the following URL:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">provider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebsocketProvider</span><span class="p">(</span>
-<span class="w">     </span><span class="s1">&#39;ws://localhost:8003&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// use the public ws server</span>
-<span class="w">     </span><span class="nx">roomname</span><span class="p">,</span>
-<span class="w">     </span><span class="nx">ydoc</span>
-<span class="w"> </span><span class="p">)</span>
-</code></pre></div>
-<ol>
-<li>
-<p><strong>Use the CRDT server</strong>: Once you are connected to the server, you can use it to synchronize your data. The CRDT server uses the Yjs library to handle the synchronization of data. You can use the Yjs API to manipulate your data and the CRDT server will take care of synchronizing it with other clients.</p>
-</li>
-<li>
-<p><strong>Handle events</strong>: The CRDT server emits events when data is synchronized. You can listen to these events to update your UI or perform other actions. For example, you can listen to the <code>update</code> event to get notified when data is updated:</p>
-</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nx">ydoc</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">update</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data updated:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">update</span><span class="p">)</span>
-<span class="w"> </span><span class="p">})</span>
-</code></pre></div>
-<ol>
-<li><strong>Handle errors</strong>: The CRDT server may emit errors if there are issues with the connection or synchronization. You can listen to the <code>error</code> event to handle these errors:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1">// Handle errors</span>
-<span class="w"> </span><span class="nx">provider</span><span class="p">.</span><span class="nx">ws</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;close&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">ev</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">code</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">4401</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;Invalid token, I stop the reconnection attempts&#39;</span><span class="p">);</span>
-<span class="w">         </span><span class="c1">// Deactivate the connection</span>
-<span class="w">         </span><span class="nx">provider</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
-<span class="w">     </span><span class="p">}</span>
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">code</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">4403</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;Invalid URL, I stop the reconnection attempts&#39;</span><span class="p">);</span>
-<span class="w">         </span><span class="c1">// Deactivate the connection</span>
-<span class="w">         </span><span class="nx">provider</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
-<span class="w">     </span><span class="p">}</span>
-<span class="w"> </span><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="kd">const</span><span class="w"> </span><span class="nx">jwt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1">// get the JWT token from your authentication system</span>
 
-<span class="w"> </span><span class="nx">provider</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection-error&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="c1">// If a protocol error occurs, the connection will be closed</span>
-<span class="w">     </span><span class="nx">provider</span><span class="p">.</span><span class="nx">ws</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-<span class="w">     </span><span class="nx">provider</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
-<span class="w"> </span><span class="p">});</span>
+<span class="w">   </span><span class="c1">// In the patejs configuration, you can set the JWT token like this in the providers array:</span>
+<span class="w">   </span><span class="nx">providers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hocuspocus&#39;</span><span class="p">,</span>
+<span class="w">         </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">roomname</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ws://localhost:8003&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// use the public ws server</span>
+<span class="w">            </span><span class="nx">token</span><span class="o">:</span><span class="w"> </span><span class="nx">jwt</span><span class="p">,</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">]</span>
 </code></pre></div>
 
 
