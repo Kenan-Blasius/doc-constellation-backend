@@ -17,9 +17,9 @@ For detailed information about nodes-related endpoints, see the [Node API](nodes
 
 For detailed information about links-related endpoints, see the [Link API](links.md) documentation.
 
-## Common
+## Search
 
-For detailed information about common endpoints, see the [Common API](common.md) documentation.
+For detailed information about search-related endpoints, see the [Search API](search.md) documentation.
 
 ## Debug
 

@@ -2,11 +2,9 @@
 
 This document provides detailed information about the nodes-related API endpoints available in the Constellation project.
 
-## Base
+## Search for nodes and links
 
-### Search for nodes and links
-
-#### GET `/constellation/{constellation_uuid}/search`
+### GET `/constellation/{constellation_uuid}/search`
 
 **Description:**
 
@@ -43,7 +41,16 @@ Search for nodes and links in a constellation.
                     },
                     "labels": [
                         "Node"
-                    ]
+                    ],
+                    "score": {
+                        "attributes": {
+                            "title": 95,
+                            "content": 85
+                        },
+                        "labels": {
+                            "Node": 100
+                        }
+                    }
                 }
             ],
         "links":
@@ -56,6 +63,15 @@ Search for nodes and links in a constellation.
                         "link_uuid": "0000-000000...",
                         "title": "example_link_title",
                         "content": "example_link_content"
+                    },
+                    "score": {
+                        "attributes": {
+                            "title": 90,
+                            "content": 80
+                        },
+                        "type": {
+                            "string": 100
+                        }
                     }
                 }
             ]

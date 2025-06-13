@@ -8,7 +8,7 @@ Welcome to the Constellation Backend API documentation. This documentation provi
 
 - [Nodes API](neo4j_api_endpoints/nodes.md)
 - [Links API](neo4j_api_endpoints/links.md)
-- [Common API](neo4j_api_endpoints/common.md)
+- [Search API](neo4j_api_endpoints/search.md)
 - [Neo4j Debug API](neo4j_api_endpoints/debug.md)
 
 ### Postgres API Endpoints
