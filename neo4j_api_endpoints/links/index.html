@@ -1999,6 +1999,8 @@
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
 <p><strong>Response:</strong></p>
 <ul>
@@ -2032,6 +2034,8 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
 <p><strong>Response:</strong></p>
 <ul>
@@ -2065,6 +2069,8 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
 <p><strong>Response:</strong></p>
 <ul>
@@ -2097,8 +2103,10 @@
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
-<p><em>*</em>Request Body:**</p>
+<p><strong>Request Body:</strong></p>
 <ul>
 <li><code>start_node</code> (body): The UUID of the start node.</li>
 <li><code>end_node</code> (body): The UUID of the end node.</li>
@@ -2142,7 +2150,7 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 </ul>
-<p><em>*</em>Request Body:**</p>
+<p><strong>Request Body:</strong></p>
 <ul>
 <li><code>start_node</code> (body): The UUID of the start node.</li>
 <li><code>end_node</code> (body): The UUID of the end node.</li>
@@ -2175,8 +2183,10 @@
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
-<p><em>*</em>Request Body:**</p>
+<p><strong>Request Body:</strong></p>
 <ul>
 <li><code>start_node</code> (body): The UUID of the start node.</li>
 <li><code>end_node</code> (body): The UUID of the end node.</li>
@@ -2283,6 +2293,8 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
 <p><strong>Request Body:</strong></p>
 <ul>
@@ -2326,6 +2338,8 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
 <p><strong>Response:</strong></p>
 <ul>
@@ -2361,6 +2375,8 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
 <p><strong>Request Body:</strong></p>
 <ul>
@@ -2403,6 +2419,8 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
 <p><strong>Response:</strong></p>
 <ul>
