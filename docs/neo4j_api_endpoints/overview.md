@@ -17,6 +17,10 @@ For detailed information about nodes-related endpoints, see the [Node API](nodes
 
 For detailed information about links-related endpoints, see the [Link API](links.md) documentation.
 
+## Common
+
+For detailed information about common endpoints, see the [Common API](common.md) documentation.
+
 ## Debug
 
 For detailed information about debug-related endpoints, see the [Debug API](debug.md) documentation.
