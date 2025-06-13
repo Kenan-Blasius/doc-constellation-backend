@@ -15,6 +15,8 @@ Retrieve all nodes in a constellation.
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Response:**
 
@@ -57,6 +59,8 @@ Retrieve a node by its UUID.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Response:**
 
@@ -99,6 +103,8 @@ Update a node by its UUID.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Request Body:**
 
@@ -180,6 +186,8 @@ Create a new node in the constellation.
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Request Body:**
 
@@ -338,6 +346,8 @@ Set the value of a specific attribute of a node.
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
 - `attribute` (path): The name of the attribute.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Request Body:**
 
@@ -391,6 +401,8 @@ Delete a specific attribute of a node.
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
 - `attribute` (path): The name of the attribute.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Response:**
 
@@ -434,6 +446,8 @@ Add an attribute to a node.
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
 - `attribute` (path): The name of the attribute.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Request Body:**
 
@@ -486,6 +500,8 @@ Retrieve all nodes with a specific attribute key in the constellation.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `attribute` (path): The name of the attribute.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Response:**
 
@@ -601,6 +617,8 @@ Remove all labels from a node.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Response:**
 
@@ -643,6 +661,8 @@ Retrieve all nodes with a specific label in the constellation.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `label` (path): The name of the label.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Response:**
 
@@ -686,6 +706,8 @@ Add a label to a node.
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
 - `label` (path): The name of the label to add.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Response:**
 
@@ -729,6 +751,8 @@ Remove a label from a node.
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
 - `label` (path): The name of the label to delete.
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Response:**
 

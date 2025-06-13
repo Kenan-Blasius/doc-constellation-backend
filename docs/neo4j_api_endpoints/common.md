@@ -16,8 +16,8 @@ Search for nodes and links in a constellation.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `search` (query): The search term to find nodes and links.
-- `in_filter` (query, optional): A filter to include only specific attributes in the final results
-- `out_filter` (query, optional): A filter to exclude specific attributes from the final results
+- `in_filter` (query, optional): A filter to include only specific attributes in the final results.
+- `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Response:**
 
