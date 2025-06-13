@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../../database_schema/indexes/">
-      
-      
-        <link rel="next" href="../nodes/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Overview - Constellation-Back-End-Documentation</title>
+        <title>Node API - Constellation-Back-End-Documentation</title>
       
     
     
@@ -116,7 +112,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#neo4j-api-endpoints-overview" class="md-skip">
+        <a href="#node-api" class="md-skip">
           Skip to content
         </a>
       
@@ -150,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Node API
             
           </span>
         </div>
@@ -292,13 +288,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../overview/" class="md-tabs__link">
           
   
     
@@ -830,8 +824,6 @@
       
   
   
-    
-  
   
     
     
@@ -846,13 +838,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -865,7 +857,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Neo4j API Endpoints
@@ -876,29 +868,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -907,74 +879,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#default" class="md-nav__link">
-    Default
-  </a>
-  
-    <nav class="md-nav" aria-label="Default">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#root" class="md-nav__link">
-    Root
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nodes" class="md-nav__link">
-    Nodes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common" class="md-nav__link">
-    Common
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debug" class="md-nav__link">
-    Debug
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1488,16 +1392,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default" class="md-nav__link">
-    Default
+  <a href="#base" class="md-nav__link">
+    Base
   </a>
   
-    <nav class="md-nav" aria-label="Default">
+    <nav class="md-nav" aria-label="Base">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#root" class="md-nav__link">
-    Root
+  <a href="#search-for-nodes-and-links" class="md-nav__link">
+    Search for nodes and links
+  </a>
+  
+    <nav class="md-nav" aria-label="Search for nodes and links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-constellationconstellation_uuidsearch" class="md-nav__link">
+    GET /constellation/{constellation_uuid}/search
   </a>
   
 </li>
@@ -1506,32 +1418,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#nodes" class="md-nav__link">
-    Nodes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common" class="md-nav__link">
-    Common
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debug" class="md-nav__link">
-    Debug
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1553,22 +1442,62 @@
   
 
 
-<h1 id="neo4j-api-endpoints-overview">Neo4j API Endpoints Overview</h1>
-<p>This document provides an overview of the API endpoints available in the Constellation project. Each endpoint is categorized based on its functionality. Click on the links to view detailed documentation for each category.</p>
-<h2 id="default">Default</h2>
-<h3 id="root">Root</h3>
+<h1 id="node-api">Node API</h1>
+<p>This document provides detailed information about the nodes-related API endpoints available in the Constellation project.</p>
+<h2 id="base">Base</h2>
+<h3 id="search-for-nodes-and-links">Search for nodes and links</h3>
+<h4 id="get-constellationconstellation_uuidsearch">GET <code>/constellation/{constellation_uuid}/search</code></h4>
+<p><strong>Description:</strong></p>
+<p>Search for nodes and links in a constellation.</p>
+<p><strong>Request Parameters:</strong></p>
 <ul>
-<li><strong>GET</strong> <code>/</code></li>
-<li>Root endpoint</li>
+<li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
+<li><code>search</code> (query): The search term to find nodes and links.</li>
+<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results</li>
+<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results</li>
 </ul>
-<h2 id="nodes">Nodes</h2>
-<p>For detailed information about nodes-related endpoints, see the <a href="../nodes/">Node API</a> documentation.</p>
-<h2 id="links">Links</h2>
-<p>For detailed information about links-related endpoints, see the <a href="../links/">Link API</a> documentation.</p>
-<h2 id="common">Common</h2>
-<p>For detailed information about common endpoints, see the <a href="../common/">Common API</a> documentation.</p>
-<h2 id="debug">Debug</h2>
-<p>For detailed information about debug-related endpoints, see the <a href="../debug/">Debug API</a> documentation.</p>
+<p><strong>Response:</strong></p>
+<ul>
+<li><code>200 OK</code>: Returns matching nodes and links.</li>
+<li><code>401 Unauthorized</code>: User not authorized.</li>
+<li><code>403 Forbidden</code>: User does not have permission to access the constellation.</li>
+<li><code>404 Not Found</code>: Constellation not found.</li>
+<li><code>500 Internal Server Error</code>: An error occurred while retrieving links.</li>
+</ul>
+<p><strong>Response Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;nodes&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;node_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_title&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_content&quot;</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="nt">&quot;labels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="s2">&quot;Node&quot;</span>
+<span class="w">                    </span><span class="p">]</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;links&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;start_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;end_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;link_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;link_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_link_title&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_link_content&quot;</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;All matching nodes and links successfully returned&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
