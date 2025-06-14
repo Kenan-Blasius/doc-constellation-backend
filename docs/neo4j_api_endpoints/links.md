@@ -15,6 +15,7 @@ Retrieve all links in a constellation.
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
@@ -57,6 +58,7 @@ Retrieve all links to/from a specific node in a constellation.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
@@ -99,6 +101,7 @@ Retrieve a link by its UUID in a constellation.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `link_uuid` (path): The unique identifier of the link.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
@@ -140,6 +143,7 @@ Create a new link in a constellation.
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
@@ -238,6 +242,7 @@ Update a link in a constellation.
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
@@ -372,6 +377,7 @@ Set the value of a specific attribute of a specific link in a constellation.
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `link_uuid` (path): The unique identifier of the link.
 - `attribute` (path): The name of the attribute.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
@@ -426,6 +432,7 @@ Delete a specific attribute of a specific link in a constellation.
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `link_uuid` (path): The unique identifier of the link.
 - `attribute` (path): The name of the attribute.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
@@ -470,6 +477,7 @@ Add a new attribute to a link in a constellation.
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `link_uuid` (path): The unique identifier of the link.
 - `attribute` (path): The name of the attribute.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
@@ -523,6 +531,7 @@ Retrieve all links with a specific attribute key in a constellation.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `attribute` (path): The name of the attribute.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 

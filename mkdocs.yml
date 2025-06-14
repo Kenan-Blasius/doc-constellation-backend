@@ -80,6 +80,7 @@ nav:
       - Overview: neo4j_api_endpoints/overview.md
       - Node Endpoints: neo4j_api_endpoints/nodes.md
       - Link Endpoints: neo4j_api_endpoints/links.md
+      - Search Endpoints: neo4j_api_endpoints/search.md
       - Debug Endpoints: neo4j_api_endpoints/debug.md
   - Postgres API Endpoints:
       - Overview: postgres_api_endpoints/overview.md
