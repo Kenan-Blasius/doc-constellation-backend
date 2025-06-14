@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../links/">
+      
+      
+        <link rel="next" href="../debug/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Node API - Constellation-Back-End-Documentation</title>
+        <title>Search Endpoints - Constellation-Back-End-Documentation</title>
       
     
     
@@ -146,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Node API
+              Search Endpoints
             
           </span>
         </div>
@@ -288,10 +292,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../overview/" class="md-tabs__link">
           
   
@@ -824,6 +830,8 @@
       
   
   
+    
+  
   
     
     
@@ -836,15 +844,17 @@
       
         
       
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -857,7 +867,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Neo4j API Endpoints
@@ -919,6 +929,106 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Search Endpoints
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Search Endpoints
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-for-nodes" class="md-nav__link">
+    Search for nodes
+  </a>
+  
+    <nav class="md-nav" aria-label="Search for nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-constellationconstellation_uuidsearchnodes" class="md-nav__link">
+    GET /constellation/{constellation_uuid}/search/nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-for-links" class="md-nav__link">
+    Search for links
+  </a>
+  
+    <nav class="md-nav" aria-label="Search for links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-constellationconstellation_uuidsearchlinks" class="md-nav__link">
+    GET /constellation/{constellation_uuid}/search/links
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 

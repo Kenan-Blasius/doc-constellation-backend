@@ -844,6 +844,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -1362,6 +1364,26 @@
   
   <span class="md-ellipsis">
     Link Endpoints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Search Endpoints
   </span>
   
 
@@ -2265,6 +2287,7 @@
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2302,6 +2325,7 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2339,6 +2363,7 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2405,6 +2430,7 @@
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2533,6 +2559,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2579,6 +2606,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2617,6 +2645,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2662,6 +2691,7 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2757,6 +2787,7 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2794,6 +2825,7 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>label</code> (path): The name of the label.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2832,6 +2864,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
 <li><code>label</code> (path): The name of the label to add.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2870,6 +2903,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
 <li><code>label</code> (path): The name of the label to delete.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
