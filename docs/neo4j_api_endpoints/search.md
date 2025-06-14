@@ -16,6 +16,8 @@ Search for nodes and links in a constellation.
 - `search` (query): The search term to find nodes and links.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
+- `limit` (query, optional): The maximum number of results to return. Defaults to 100.
+- `page` (query, optional): The page number for pagination. Defaults to 1.
 
 **Response:**
 
