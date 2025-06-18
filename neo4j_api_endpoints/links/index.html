@@ -2291,6 +2291,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
+<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
 </ul>
 <p><strong>Response:</strong></p>
 <ul>
@@ -2304,9 +2305,7 @@
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;value1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;value2&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;value3&quot;</span>
+<span class="w">    </span><span class="s2">&quot;value1&quot;</span>
 <span class="w">  </span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attribute retrieved&quot;</span>
 <span class="p">}</span>
