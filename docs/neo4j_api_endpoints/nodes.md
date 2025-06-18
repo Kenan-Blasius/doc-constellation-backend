@@ -316,6 +316,7 @@ Retrieve the value of a specific attribute of a node.
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
 - `attribute` (path): The name of the attribute.
+- `decode` (query, optional): Set to `false` by default. If set to `true`, the attributes containing ydoc data will be decoded to a readable format.
 
 **Response:**
 
