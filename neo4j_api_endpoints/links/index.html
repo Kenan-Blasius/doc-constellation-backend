@@ -2021,7 +2021,7 @@
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2057,7 +2057,7 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>node_uuid</code> (path): The unique identifier of the node.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2093,7 +2093,7 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2128,7 +2128,7 @@
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2209,7 +2209,7 @@
 <p><strong>Request Parameters:</strong></p>
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2291,7 +2291,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 </ul>
 <p><strong>Response:</strong></p>
 <ul>
@@ -2319,7 +2319,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2365,7 +2365,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2403,7 +2403,7 @@
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>link_uuid</code> (path): The unique identifier of the link.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
@@ -2448,7 +2448,7 @@
 <ul>
 <li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
 <li><code>attribute</code> (path): The name of the attribute.</li>
-<li><code>decode</code> (query, optional): Set to <code>false</code> by default. If set to <code>true</code>, the attributes containing ydoc data will be decoded to a readable format.</li>
+<li><code>decode</code> (query, optional): Set to None by default. If set to <code>XML</code>, <code>xml</code>, <code>XML_TEXT</code> or <code>xml_text</code>, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to <code>PLAIN</code>, <code>plain</code>, <code>PLAIN_TEXT</code> or <code>plain_text</code>, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.</li>
 <li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
 <li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
 </ul>
