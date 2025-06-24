@@ -105,6 +105,8 @@ Update a node by its UUID.
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
 - `node_uuid` (path): The unique identifier of the node.
+- `attributes` (body): A JSON object containing the attributes to update. The keys are the attribute names and the values are the new values for those attributes.
+- `labels` (body, optional): A list of labels to add to the node. If not provided, the existing labels will remain unchanged.
 - `decode` (query, optional): Set to None by default. If set to `XML`, `xml`, `XML_TEXT` or `xml_text`, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to `PLAIN`, `plain`, `PLAIN_TEXT` or `plain_text`, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
@@ -113,9 +115,12 @@ Update a node by its UUID.
 
 ```json
 {
-  "title": "example_title",
-  "content": "example_content",
-  "example_attribute": "example_value"
+  "attributes": {
+    "title": "example_title",
+    "content": "example_content",
+    "example_attribute": "example_value"
+  },
+  "labels": ["Node", "ExampleLabel"]
 }
 ```
 
@@ -189,6 +194,8 @@ Create a new node in the constellation.
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
+- `attributes` (body): A JSON object containing the attributes for the new node. The keys are the attribute names and the values are the values for those attributes.
+- `labels` (body, optional): A list of labels to add to the node.
 - `decode` (query, optional): Set to None by default. If set to `XML`, `xml`, `XML_TEXT` or `xml_text`, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to `PLAIN`, `plain`, `PLAIN_TEXT` or `plain_text`, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
@@ -197,9 +204,12 @@ Create a new node in the constellation.
 
 ```json
 {
-  "title": "example_title",
-  "content": "example_content",
-  "example_attribute": "example_value"
+  "attributes": {
+    "title": "example_title",
+    "content": "example_content",
+    "example_attribute": "example_value"
+  },
+  "labels": ["Node", "ExampleLabel"]
 }
 ```
 
