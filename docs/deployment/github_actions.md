@@ -1,94 +1,94 @@
-# Documentation du déploiement automatique du Backend de Constellation par Github Actions
+# Automated Deployment Documentation for Constellation Backend via GitHub Actions
 
-## Prérequis
+## Prerequisites
 
-- Un serveur distant (VPS, serveur dédié, etc.) avec une distribution Linux (Ubuntu 20.04 LTS ou plus récent recommandé)
-- Docker et Docker Compose installés sur le serveur
-- Git configuré avec les permissions nécessaires pour cloner et pull le repot
-- Un utilisateur avec les droits sudo sans mot de passe (pour lancer les commandes Docker)
+- A remote server (VPS, dedicated server, etc.) running a Linux distribution (Ubuntu 20.04 LTS or newer recommended)
+- Docker and Docker Compose installed on the server
+- Git configured with the necessary permissions to clone and pull the repo
+- A user with passwordless sudo privileges (to run Docker commands)
 
-## Github Action pour le déploiement
+## GitHub Action for Deployment
 
-Le déploiement du backend de Constellation est automatisé via Github Actions.
-La github action est définie dans le fichier `.github/workflows/deploy.yml` du repository.
+The Constellation backend deployment is automated via GitHub Actions.
+The GitHub Action is defined in the `.github/workflows/deploy.yml` file of the repository.
 
-### Étapes de la Github Action
+### Steps in the GitHub Action
 
-1. Cloner le repository sur le serveur distant (checkout)
-2. Mettre en place la clé SSH pour ce connecter au serveur distant (ssh-key récuperée via les secrets de Github)
-3. Créer le fichier `.env` à partir des secrets de Github puis le copier sur le serveur distant
-4. Copier le script de déploiement `deployBack.sh` sur le serveur distant
-5. Exécuter le script de déploiement
+1. Clone the repository on the remote server (checkout)
+2. Set up the SSH key to connect to the remote server (SSH key retrieved from GitHub Secrets)
+3. Create the `.env` file from GitHub Secrets, then copy it to the remote server
+4. Copy the deployment script `deployBack.sh` to the remote server
+5. Execute the deployment script
 
-### Secrets de Github
+### GitHub Secrets
 
-Pour que la Github Action fonctionne, il faut ajouter les secrets suivants dans les secrets du repository:
+For the GitHub Action to work, add the following secrets to the repository:
 
-- `secrets.DEPLOY_IP`: L'adresse IP du serveur distant
-- `secrets.DEPLOY_USER`: L'utilisateur pour se connecter au serveur distant
-- `secrets.EPITECH_REPO_SSH_KEY`: La clé SSH privée pour se connecter au serveur distant
-- `secrets.DEPLOY_ENV_PIPENV_VENV_IN_PROJECT`: La variable d'environnement `PIPENV_VENV_IN_PROJECT` qui sera mise dans le fichier `.env` du serveur distant par la Github Action
-- `secrets.DEPLOY_ENV_TARGET`: La variable d'environnement `TARGET` qui sera mise dans le fichier `.env` du serveur distant par la Github Action
-- `secrets.DEPLOY_ENV_POSTGRES_USER`: La variable d'environnement `POSTGRES_USER` qui sera mise dans le fichier `.env` du serveur distant par la Github Action
-- `secrets.DEPLOY_ENV_POSTGRES_PASSWORD`: La variable d'environnement `POSTGRES_PASSWORD` qui sera mise dans le fichier `.env` du serveur distant par la Github Action
-- `secrets.DEPLOY_ENV_POSTGRES_HOST`: La variable d'environnement `POSTGRES_HOST` qui sera mise dans le fichier `.env` du serveur distant par la Github Action
-- `secrets.DEPLOY_ENV_POSTGRES_PORT`: La variable d'environnement `POSTGRES_PORT` qui sera mise dans le fichier `.env` du serveur distant par la Github Action
-- `secrets.DEPLOY_ENV_POSTGRES_DB`: La variable d'environnement `POSTGRES_DB` qui sera mise dans le fichier `.env` du serveur distant par la Github Action
-- `secrets.DEPLOY_ENV_JWT_SECRET_KEY`: La variable d'environnement `JWT_SECRET_KEY` qui sera mise dans le fichier `.env` du serveur distant par la Github Action
+- `secrets.DEPLOY_IP`: IP address of the remote server
+- `secrets.DEPLOY_USER`: Username to log in to the remote server
+- `secrets.EPITECH_REPO_SSH_KEY`: Private SSH key to connect to the remote server
+- `secrets.DEPLOY_ENV_PIPENV_VENV_IN_PROJECT`: `PIPENV_VENV_IN_PROJECT` environment variable, to be placed in the `.env` file on the remote server
+- `secrets.DEPLOY_ENV_TARGET`: `TARGET` environment variable, to be placed in the `.env` file
+- `secrets.DEPLOY_ENV_POSTGRES_USER`: `POSTGRES_USER` environment variable, to be placed in the `.env` file
+- `secrets.DEPLOY_ENV_POSTGRES_PASSWORD`: `POSTGRES_PASSWORD` environment variable, to be placed in the `.env` file
+- `secrets.DEPLOY_ENV_POSTGRES_HOST`: `POSTGRES_HOST` environment variable, to be placed in the `.env` file
+- `secrets.DEPLOY_ENV_POSTGRES_PORT`: `POSTGRES_PORT` environment variable, to be placed in the `.env` file
+- `secrets.DEPLOY_ENV_POSTGRES_DB`: `POSTGRES_DB` environment variable, to be placed in the `.env` file
+- `secrets.DEPLOY_ENV_JWT_SECRET_KEY`: `JWT_SECRET_KEY` environment variable, to be placed in the `.env` file
 
-## Script de déploiement
+## Deployment Script
 
-Le script de déploiement `deployBack.sh` est exécuté sur le serveur distant par la Github Action.
+The deployment script `deployBack.sh` is executed on the remote server by the GitHub Action.
 
-### Étapes du script de déploiement
+### Steps in the Deployment Script
 
-1. Vérifier que git et docker sont installés sur le serveur
-2. Vérifier si le repository a déjà été cloné sur le serveur
-   - Si oui, pull le repository
-   - Si non, cloner le repository
-3. Copier le fichier `.env` depuis celui créé par la Github Action (deployDotEnv) dans le repository
-   - Si le fichier `~/depoyDotEnv` est présent sur le serveur, il sera copié et renommé en `.env` dans le repository
-   - Sinon, si le fichier `~/depoyDotEnv` n'est pas présent:
-     - ET que le repository contient déjà un fichier `.env`, on continue
-     - ET que le repository ne contient pas de fichier `.env`, on arrête le déploiement
-4. Se rendre dans le repository cloné
-5. Arrêter et supprimer les containers Docker existants (`docker compose down`)
-6. Lancer les containers Docker (`docker compose up -d`)
-7. Créer un fichier `deployStatus.txt` pour indiquer que le déploiement a été effectué et à quelle date
+1. Verify that Git and Docker are installed on the server
+2. Check if the repository has already been cloned on the server
+   - If yes, pull the repository
+   - If no, clone the repository
+3. Copy the `.env` file created by the GitHub Action (`deployDotEnv`) into the repository
+   - If the file `~/deployDotEnv` exists on the server, copy it and rename it to `.env` in the repository
+   - Otherwise, if `~/deployDotEnv` is not present:
+     - **And** the repository already contains a `.env` file, continue
+     - **And** the repository does not contain a `.env` file, abort the deployment
+4. Change into the cloned repository directory
+5. Stop and remove existing Docker containers (`docker compose down`)
+6. Start the Docker containers (`docker compose up -d`)
+7. Create a `deployStatus.txt` file to indicate that deployment was completed and on which date
 
-## Diagramme de déploiement
+## Deployment Diagram
 
 ```mermaid
 graph TD;
-   subgraph Serveur
+   subgraph Server
    direction TB
-      A[Éxecute deployBack.sh] --> B[Git et Docker installés?];
-      B -->|Oui| C[Repository déjà cloné?];
-      B -->|Non| P[Erreur];
-      C --> D[Oui];
-      C --> E[Non];
+      A[Run deployBack.sh] --> B[Are Git and Docker installed?];
+      B -->|Yes| C[Is the repository already cloned?];
+      B -->|No| P[Error];
+      C --> D[Yes];
+      C --> E[No];
       D -->|Pull| F;
-      E -->|Clone| F[Repository à jour];
-      F --> G[deployDotEnv existe];
-      F --> H[deployDotEnv n'existe pas];
+      E -->|Clone| F[Repository up to date];
+      F --> G[deployDotEnv exists];
+      F --> H[deployDotEnv does not exist];
 
-      subgraph Gestion du .env
-         G --> I[Copie et renomme en .env];
-         H --> J[Un .env existe déjà dans le repository];
-         H --> K[Erreur];
+      subgraph .env Handling
+         G --> I[Copy and rename to .env];
+         H --> J[Existing .env in repo];
+         H --> K[Error];
       end
 
-      J --> L[Se rend dans le repository];
+      J --> L[Change into repo directory];
       I --> L;
-      L --> M[Arrête et supprime les containers];
-      M --> N[Lance les containers];
-      N --> O[Crée deployStatus.txt];
-      O -->|Déploiement réussi | Success((Fin du Processus));
+      L --> M[Stop and remove containers];
+      M --> N[Start containers];
+      N --> O[Create deployStatus.txt];
+      O -->|Deployment successful| Success((End Process));
    end
    subgraph GitHub_Actions
       deploy.yml -->|Creates| deployDotEnv;
-      deployDotEnv -->|Copie| Serveur;
-      deploy.yml -->|Copies deployBack.sh| Serveur;
-      deploy.yml -->|SSH| Serveur;
+      deployDotEnv -->|Copies| Server;
+      deploy.yml -->|Copies deployBack.sh| Server;
+      deploy.yml -->|SSH| Server;
    end
 ```
