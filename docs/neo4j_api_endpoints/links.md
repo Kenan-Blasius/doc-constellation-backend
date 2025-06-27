@@ -249,14 +249,18 @@ Update a link in a constellation.
 **Request Body:**
 
 - `start_node` (body): The UUID of the start node.
+- `new_start_node` (body, optional): The new UUID of the start node.
 - `end_node` (body): The UUID of the end node.
+- `new_end_node` (body, optional): The new UUID of the end node.
 - `link_type` (body): The type of the link.
-- `new_link_type` (body): The new type of the link.
+- `new_link_type` (body, optional): The new type of the link.
 
 ```json
 {
     "start_node": "0000-000000...",
+    "new_start_node": "0000-000000...",
     "end_node": "0000-000000...",
+    "new_end_node": "0000-000000...",
     "link_type": "string",
     "new_link_type": "string"
 }
