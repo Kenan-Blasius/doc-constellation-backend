@@ -2216,13 +2216,17 @@
 <p><strong>Request Body:</strong></p>
 <ul>
 <li><code>start_node</code> (body): The UUID of the start node.</li>
+<li><code>new_start_node</code> (body, optional): The new UUID of the start node.</li>
 <li><code>end_node</code> (body): The UUID of the end node.</li>
+<li><code>new_end_node</code> (body, optional): The new UUID of the end node.</li>
 <li><code>link_type</code> (body): The type of the link.</li>
-<li><code>new_link_type</code> (body): The new type of the link.</li>
+<li><code>new_link_type</code> (body, optional): The new type of the link.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;start_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;new_start_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;end_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;new_end_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;link_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;new_link_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="p">}</span>
