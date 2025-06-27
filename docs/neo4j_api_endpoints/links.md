@@ -190,7 +190,7 @@ Create a new link in a constellation.
 
 ### Delete a link
 
-#### DELETE `/constellation/{constellation_uuid}/link`
+#### DELETE `/constellation/{constellation_uuid}/link/{link_uuid}`
 
 **Description:**
 
@@ -199,20 +199,7 @@ Delete a link in a constellation.
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
-
-**Request Body:**
-
-- `start_node` (body): The UUID of the start node.
-- `end_node` (body): The UUID of the end node.
-- `link_type` (body): The type of the link.
-
-```json
-{
-    "start_node": "0000-000000...",
-    "end_node": "0000-000000...",
-    "link_type": "string"
-}
-```
+- `link_uuid` (path): The unique identifier of the link.
 
 **Response:**
 
@@ -233,7 +220,7 @@ Delete a link in a constellation.
 
 ### Update a link
 
-#### PATCH `/constellation/{constellation_uuid}/link`
+#### PATCH `/constellation/{constellation_uuid}/link/{link_uuid}`
 
 **Description:**
 
@@ -242,26 +229,21 @@ Update a link in a constellation.
 **Request Parameters:**
 
 - `constellation_uuid` (path): The unique identifier of the constellation.
+- `link_uuid` (path): The unique identifier of the link.
 - `decode` (query, optional): Set to None by default. If set to `XML`, `xml`, `XML_TEXT` or `xml_text`, the attributes containing ydoc data will be decoded to a readable format in an xml format. If set to `PLAIN`, `plain`, `PLAIN_TEXT` or `plain_text`, the attributes containing ydoc data will be decoded to a readable format in a plain text format. Else, the attributes will be returned in their original format.
 - `in_filter` (query, optional): A filter to include only specific attributes in the final results.
 - `out_filter` (query, optional): A filter to exclude specific attributes from the final results.
 
 **Request Body:**
 
-- `start_node` (body): The UUID of the start node.
 - `new_start_node` (body, optional): The new UUID of the start node.
-- `end_node` (body): The UUID of the end node.
 - `new_end_node` (body, optional): The new UUID of the end node.
-- `link_type` (body): The type of the link.
 - `new_link_type` (body, optional): The new type of the link.
 
 ```json
 {
-    "start_node": "0000-000000...",
     "new_start_node": "0000-000000...",
-    "end_node": "0000-000000...",
     "new_end_node": "0000-000000...",
-    "link_type": "string",
     "new_link_type": "string"
 }
 ```
