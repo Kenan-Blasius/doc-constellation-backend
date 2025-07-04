@@ -92,6 +92,10 @@ nav:
       - Debug Endpoints: postgres_api_endpoints/debug.md
   - CRDT Server:
       - Overview: crdt_server/overview.md
+  - RAG AI:
+      - Overview: rag_ai/overview.md
+      - API: rag_ai/api.md
+      - Structure: rag_ai/structure.md
   - Testing:
       - Overview: testing/overview.md
       # - Unit Tests: testing/unit_tests.md

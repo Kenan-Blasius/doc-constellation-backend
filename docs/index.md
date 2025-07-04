@@ -27,6 +27,10 @@ Welcome to the Constellation Backend API documentation. This documentation provi
 
 - [CRDT Server](crdt_server/overview.md)
 
+### RAG AI
+
+- [RAG AI](rag_ai/overview.md)
+
 Each section contains detailed information about the request parameters, request body, response, and response examples for the respective API endpoints.
 
 ## Getting Started
