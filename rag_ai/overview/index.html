@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../links/">
+        <link rel="prev" href="../../crdt_server/overview/">
       
       
-        <link rel="next" href="../debug/">
+        <link rel="next" href="../api/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Search Endpoints - Constellation-Back-End-Documentation</title>
+        <title>Overview - Constellation-Back-End-Documentation</title>
       
     
     
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#node-api" class="md-skip">
+        <a href="#rag-ai-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Search Endpoints
+              Overview
             
           </span>
         </div>
@@ -292,13 +292,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../overview/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../neo4j_api_endpoints/overview/" class="md-tabs__link">
           
   
     
@@ -354,11 +352,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../rag_ai/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -850,8 +850,6 @@
       
   
   
-    
-  
   
     
     
@@ -868,13 +866,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -887,7 +885,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Neo4j API Endpoints
@@ -900,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../neo4j_api_endpoints/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nodes/" class="md-nav__link">
+      <a href="../../neo4j_api_endpoints/nodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links/" class="md-nav__link">
+      <a href="../../neo4j_api_endpoints/links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -958,29 +956,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Search Endpoints
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../neo4j_api_endpoints/search/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,66 +967,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#search-for-nodes" class="md-nav__link">
-    Search for nodes
-  </a>
-  
-    <nav class="md-nav" aria-label="Search for nodes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationconstellation_uuidsearchnodes" class="md-nav__link">
-    GET /constellation/{constellation_uuid}/search/nodes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#search-for-links" class="md-nav__link">
-    Search for links
-  </a>
-  
-    <nav class="md-nav" aria-label="Search for links">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationconstellation_uuidsearchlinks" class="md-nav__link">
-    GET /constellation/{constellation_uuid}/search/links
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1060,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../debug/" class="md-nav__link">
+      <a href="../../neo4j_api_endpoints/debug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,6 +1265,8 @@
       
   
   
+    
+  
   
     
     
@@ -1359,13 +1279,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -1378,7 +1298,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             RAG AI
@@ -1389,9 +1309,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../rag_ai/overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1400,6 +1340,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#information" class="md-nav__link">
+    Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-the-rag-ai" class="md-nav__link">
+    How to use the RAG AI
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1411,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rag_ai/api/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1431,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rag_ai/structure/" class="md-nav__link">
+      <a href="../structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1631,42 +1605,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#search-for-nodes" class="md-nav__link">
-    Search for nodes
+  <a href="#information" class="md-nav__link">
+    Information
   </a>
-  
-    <nav class="md-nav" aria-label="Search for nodes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationconstellation_uuidsearchnodes" class="md-nav__link">
-    GET /constellation/{constellation_uuid}/search/nodes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#search-for-links" class="md-nav__link">
-    Search for links
+  <a href="#how-to-use-the-rag-ai" class="md-nav__link">
+    How to use the RAG AI
   </a>
-  
-    <nav class="md-nav" aria-label="Search for links">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationconstellation_uuidsearchlinks" class="md-nav__link">
-    GET /constellation/{constellation_uuid}/search/links
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1688,106 +1636,32 @@
   
 
 
-<h1 id="node-api">Node API</h1>
-<p>This document provides detailed information about the nodes-related API endpoints available in the Constellation project.</p>
-<h2 id="search-for-nodes">Search for nodes</h2>
-<h3 id="get-constellationconstellation_uuidsearchnodes">GET <code>/constellation/{constellation_uuid}/search/nodes</code></h3>
-<p><strong>Description:</strong></p>
-<p>Search for nodes in a constellation.</p>
-<p><strong>Request Parameters:</strong></p>
-<ul>
-<li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
-<li><code>search</code> (query): The search term to find nodes.</li>
-<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
-<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
-<li><code>limit</code> (query, optional): The maximum number of results to return. Defaults to 100.</li>
-<li><code>page</code> (query, optional): The page number for pagination. Defaults to 1.</li>
-</ul>
-<p><strong>Response:</strong></p>
-<ul>
-<li><code>200 OK</code>: Returns matching nodes.</li>
-<li><code>401 Unauthorized</code>: User not authorized.</li>
-<li><code>403 Forbidden</code>: User does not have permission to access the constellation.</li>
-<li><code>404 Not Found</code>: Constellation not found.</li>
-<li><code>500 Internal Server Error</code>: An error occurred while retrieving nodes.</li>
-</ul>
-<p><strong>Response Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span>
-<span class="w">        </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;node_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_title&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_content&quot;</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;labels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                    </span><span class="s2">&quot;Node&quot;</span>
-<span class="w">                </span><span class="p">],</span>
-<span class="w">                </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;labels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;Node&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;All matching nodes successfully returned&quot;</span>
-<span class="p">}</span>
+<h1 id="rag-ai-overview">RAG AI Overview</h1>
+<p>This document provides an overview of how to use the RAG AI in the Constellation project.</p>
+<h2 id="information">Information</h2>
+<p>The RAG AI (Retrieval-Augmented Generation AI) is designed to enhance the capabilities of the Constellation project by integrating AI-driven retrieval and generation features. It enables the user to ask questions and receive answers based on the data stored in the Constellation database, leveraging both retrieval and generation techniques.</p>
+<h2 id="how-to-use-the-rag-ai">How to use the RAG AI</h2>
+<ol>
+<li>
+<p><strong>Start the RAG AI</strong>: The RAG AI is a separate service that needs to be started before you can use it. You can start the service by running the following command:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
 </code></pre></div>
-<h2 id="search-for-links">Search for links</h2>
-<h3 id="get-constellationconstellation_uuidsearchlinks">GET <code>/constellation/{constellation_uuid}/search/links</code></h3>
-<p><strong>Description:</strong></p>
-<p>Search for links in a constellation.</p>
-<p><strong>Request Parameters:</strong></p>
-<ul>
-<li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
-<li><code>search</code> (query): The search term to find links.</li>
-<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
-<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
-<li><code>limit</code> (query, optional): The maximum number of results to return. Defaults to 100.</li>
-<li><code>page</code> (query, optional): The page number for pagination. Defaults to 1.</li>
-</ul>
-<p><strong>Response:</strong></p>
-<ul>
-<li><code>200 OK</code>: Returns matching links.</li>
-<li><code>401 Unauthorized</code>: User not authorized.</li>
-<li><code>403 Forbidden</code>: User does not have permission to access the constellation.</li>
-<li><code>404 Not Found</code>: Constellation not found.</li>
-<li><code>500 Internal Server Error</code>: An error occurred while retrieving links.</li>
-</ul>
-<p><strong>Response Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span>
-<span class="w">        </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;start_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;end_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;link_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;link_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_link_title&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_link_content&quot;</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;string&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;All matching links successfully returned&quot;</span>
-<span class="p">}</span>
+</li>
+<li>
+<p><strong>Build the index</strong>: The RAG AI requires an index to be built from the data stored in the Constellation database. You can build the index by sending a POST request to the <code>/build-index/{{constellation_uuid}}</code> endpoint with the user token (used to fetch data) in the headers and the constellation UUID in the URL.</p>
+<p>Example request:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8004/build-index/1234<span class="w"> </span><span class="se">\</span>
+-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer your_user_token&quot;</span>
 </code></pre></div>
+</li>
+<li>
+<p><strong>Ask a question</strong>: Once the index is built, you can ask questions by sending a POST request to the <code>/query</code> endpoint with the user token in the headers and the question, the top_k (number of chunks to use to generate the result to return, default to 5), and the threshold (minimum score for results, if no chunks meet the threshold, the result will be an excuse saying no information was found, default to 0.15) in the query parameters.</p>
+<p>Example request:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8004/query?q<span class="o">=</span>your_question<span class="p">&amp;</span><span class="nv">top_k</span><span class="o">=</span><span class="m">5</span><span class="p">&amp;</span><span class="nv">threshold</span><span class="o">=</span><span class="m">0</span>.15<span class="w"> </span><span class="se">\</span>
+-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer your_user_token&quot;</span>
+</code></pre></div>
+</li>
+</ol>
 
 
 

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../links/">
+        <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../debug/">
+        <link rel="next" href="../structure/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Search Endpoints - Constellation-Back-End-Documentation</title>
+        <title>API - Constellation-Back-End-Documentation</title>
       
     
     
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#node-api" class="md-skip">
+        <a href="#api-endpoints-for-the-rag-ai" class="md-skip">
           Skip to content
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Search Endpoints
+              API
             
           </span>
         </div>
@@ -292,13 +292,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../overview/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../neo4j_api_endpoints/overview/" class="md-tabs__link">
           
   
     
@@ -354,11 +352,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../rag_ai/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
     
@@ -850,8 +850,6 @@
       
   
   
-    
-  
   
     
     
@@ -868,13 +866,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -887,7 +885,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Neo4j API Endpoints
@@ -900,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../neo4j_api_endpoints/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nodes/" class="md-nav__link">
+      <a href="../../neo4j_api_endpoints/nodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links/" class="md-nav__link">
+      <a href="../../neo4j_api_endpoints/links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -958,29 +956,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Search Endpoints
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../neo4j_api_endpoints/search/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,66 +967,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#search-for-nodes" class="md-nav__link">
-    Search for nodes
-  </a>
-  
-    <nav class="md-nav" aria-label="Search for nodes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationconstellation_uuidsearchnodes" class="md-nav__link">
-    GET /constellation/{constellation_uuid}/search/nodes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#search-for-links" class="md-nav__link">
-    Search for links
-  </a>
-  
-    <nav class="md-nav" aria-label="Search for links">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-constellationconstellation_uuidsearchlinks" class="md-nav__link">
-    GET /constellation/{constellation_uuid}/search/links
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1060,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../debug/" class="md-nav__link">
+      <a href="../../neo4j_api_endpoints/debug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,6 +1265,8 @@
       
   
   
+    
+  
   
     
     
@@ -1359,13 +1279,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -1378,7 +1298,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             RAG AI
@@ -1391,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rag_ai/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1409,9 +1329,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../rag_ai/api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1420,6 +1360,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    Endpoints
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-index" class="md-nav__link">
+    Build Index
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-build-indexconstellation_uuid" class="md-nav__link">
+    POST /build-index/{{constellation_uuid}}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+    <nav class="md-nav" aria-label="Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-queryconstellation_uuid" class="md-nav__link">
+    POST /query/{{constellation_uuid}}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1431,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rag_ai/structure/" class="md-nav__link">
+      <a href="../structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1631,16 +1644,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#search-for-nodes" class="md-nav__link">
-    Search for nodes
+  <a href="#endpoints" class="md-nav__link">
+    Endpoints
   </a>
   
-    <nav class="md-nav" aria-label="Search for nodes">
+    <nav class="md-nav" aria-label="Endpoints">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-constellationconstellation_uuidsearchnodes" class="md-nav__link">
-    GET /constellation/{constellation_uuid}/search/nodes
+  <a href="#build-index" class="md-nav__link">
+    Build Index
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-build-indexconstellation_uuid" class="md-nav__link">
+    POST /build-index/{{constellation_uuid}}
   </a>
   
 </li>
@@ -1649,19 +1670,24 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#search-for-links" class="md-nav__link">
-    Search for links
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
   </a>
   
-    <nav class="md-nav" aria-label="Search for links">
+    <nav class="md-nav" aria-label="Query">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-constellationconstellation_uuidsearchlinks" class="md-nav__link">
-    GET /constellation/{constellation_uuid}/search/links
+  <a href="#post-queryconstellation_uuid" class="md-nav__link">
+    POST /query/{{constellation_uuid}}
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1688,73 +1714,20 @@
   
 
 
-<h1 id="node-api">Node API</h1>
-<p>This document provides detailed information about the nodes-related API endpoints available in the Constellation project.</p>
-<h2 id="search-for-nodes">Search for nodes</h2>
-<h3 id="get-constellationconstellation_uuidsearchnodes">GET <code>/constellation/{constellation_uuid}/search/nodes</code></h3>
+<h1 id="api-endpoints-for-the-rag-ai">API Endpoints for the RAG AI</h1>
+<p>This document provides an overview of the API endpoints available for the RAG AI in the Constellation project.</p>
+<h2 id="endpoints">Endpoints</h2>
+<h3 id="build-index">Build Index</h3>
+<h4 id="post-build-indexconstellation_uuid">POST <code>/build-index/{{constellation_uuid}}</code></h4>
 <p><strong>Description:</strong></p>
-<p>Search for nodes in a constellation.</p>
+<p>Builds the index for the RAG AI using the data from the Constellation database.</p>
 <p><strong>Request Parameters:</strong></p>
 <ul>
-<li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
-<li><code>search</code> (query): The search term to find nodes.</li>
-<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
-<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
-<li><code>limit</code> (query, optional): The maximum number of results to return. Defaults to 100.</li>
-<li><code>page</code> (query, optional): The page number for pagination. Defaults to 1.</li>
+<li><code>constellation_uuid</code> (path): The UUID of the constellation for which the index is to be built</li>
 </ul>
 <p><strong>Response:</strong></p>
 <ul>
-<li><code>200 OK</code>: Returns matching nodes.</li>
-<li><code>401 Unauthorized</code>: User not authorized.</li>
-<li><code>403 Forbidden</code>: User does not have permission to access the constellation.</li>
-<li><code>404 Not Found</code>: Constellation not found.</li>
-<li><code>500 Internal Server Error</code>: An error occurred while retrieving nodes.</li>
-</ul>
-<p><strong>Response Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span>
-<span class="w">        </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;node_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_title&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_content&quot;</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;labels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                    </span><span class="s2">&quot;Node&quot;</span>
-<span class="w">                </span><span class="p">],</span>
-<span class="w">                </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;labels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;Node&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;All matching nodes successfully returned&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="search-for-links">Search for links</h2>
-<h3 id="get-constellationconstellation_uuidsearchlinks">GET <code>/constellation/{constellation_uuid}/search/links</code></h3>
-<p><strong>Description:</strong></p>
-<p>Search for links in a constellation.</p>
-<p><strong>Request Parameters:</strong></p>
-<ul>
-<li><code>constellation_uuid</code> (path): The unique identifier of the constellation.</li>
-<li><code>search</code> (query): The search term to find links.</li>
-<li><code>in_filter</code> (query, optional): A filter to include only specific attributes in the final results.</li>
-<li><code>out_filter</code> (query, optional): A filter to exclude specific attributes from the final results.</li>
-<li><code>limit</code> (query, optional): The maximum number of results to return. Defaults to 100.</li>
-<li><code>page</code> (query, optional): The page number for pagination. Defaults to 1.</li>
-</ul>
-<p><strong>Response:</strong></p>
-<ul>
-<li><code>200 OK</code>: Returns matching links.</li>
+<li><code>200 OK</code>: Index built successfully.</li>
 <li><code>401 Unauthorized</code>: User not authorized.</li>
 <li><code>403 Forbidden</code>: User does not have permission to access the constellation.</li>
 <li><code>404 Not Found</code>: Constellation not found.</li>
@@ -1762,30 +1735,52 @@
 </ul>
 <p><strong>Response Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span>
-<span class="w">        </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;start_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;end_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;link_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;link_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000-000000...&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_link_title&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_link_content&quot;</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;string&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;All matching links successfully returned&quot;</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;constellation_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;chunks_generated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Index built successfully.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="query">Query</h3>
+<h4 id="post-queryconstellation_uuid">POST <code>/query/{{constellation_uuid}}</code></h4>
+<p><strong>Description:</strong></p>
+<p>Asks a question to the RAG AI and retrieves the answer based on the data stored in the built index.</p>
+<p><strong>Request Parameters:</strong></p>
+<ul>
+<li><code>constellation_uuid</code> (path): The UUID of the constellation for which the question is asked.</li>
+<li><code>q</code> (query): The question to ask.</li>
+<li><code>k</code> (query, optional): The number of chunks to use to generate the result (default is 5).</li>
+<li><code>threshold</code> (query, optional): The minimum score for results (default is 0.15).</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><code>200 OK</code>: Question answered successfully.</li>
+<li><code>401 Unauthorized</code>: User not authorized.</li>
+<li><code>403 Forbidden</code>: User does not have permission to access the constellation.</li>
+<li><code>404 Not Found</code>: Constellation not found.</li>
+<li><code>500 Internal Server Error</code>: An error occurred while retrieving the answer.</li>
+</ul>
+<p><strong>Response Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;question&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;What is the capital of France?&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;qa_answer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Paris&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.95</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;answer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The capital of France is Paris.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;sources&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;collection_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/my_file&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_file&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DRAFT&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;owner_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-06-26T09:37:05.265319Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-06-26T09:37:05.265319Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;doc_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;chunk_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text of the chunk&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="w">  </span><span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
 
