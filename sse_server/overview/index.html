@@ -1750,25 +1750,27 @@
 <h2 id="how-to-use-the-sse-server">How to Use the SSE Server</h2>
 <p>To use the SSE server in the Constellation project, follow these steps:</p>
 <ol>
-<li><strong>Start the SSE Server</strong>: The SSE server is a separate service that needs to be started before you can use it. You can start the server by running the docker compose file located at the root of the project. The command to start the server is:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
+<li>
+<p><strong>Start the SSE Server</strong>: The SSE server is a separate service that needs to be started before you can use it. You can start the server by running the docker compose file located at the root of the project. The command to start the server is:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
 </code></pre></div>
-<ol>
-<li><strong>Connect to the SSE Server</strong>: You can connect to the SSE server using the EventSource API that support sending a header for the authorization token in your JavaScript code. The URL for the SSE server is <code>http://localhost:8002/sse/updates/{{constellation_uuid}}</code>. Here is an example of how to connect to the SSE server:</li>
-</ol>
-<p><code>js
-        const eventSource = new window.EventSourcePolyfill(`http://localhost:8002/sse/updates/0be5f2a0-1e2a-440d-82e8-40eecde2de6e`, {
-            headers: { "Authorization": `Bearer ${jwt}` }
-        });</code></p>
-<ol>
-<li><strong>Handle SSE Events</strong>: Once connected, you can listen for events sent by the server:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nx">eventSource</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-<span class="w">         </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;New event received:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
-<span class="w">     </span><span class="p">};</span>
+</li>
+<li>
+<p><strong>Connect to the SSE Server</strong>: You can connect to the SSE server using the EventSource API that support sending a header for the authorization token in your JavaScript code. The URL for the SSE server is <code>http://localhost:8002/sse/updates/{{constellation_uuid}}</code>. Here is an example of how to connect to the SSE server:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">eventSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">EventSourcePolyfill</span><span class="p">(</span><span class="sb">`http://localhost:8002/sse/updates/0be5f2a0-1e2a-440d-82e8-40eecde2de6e`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;Authorization&quot;</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">jwt</span><span class="si">}</span><span class="sb">`</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
 </code></pre></div>
+</li>
+<li>
+<p><strong>Handle SSE Events</strong>: Once connected, you can listen for events sent by the server:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">eventSource</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;New event received:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="p">};</span>
+</code></pre></div>
+</li>
+</ol>
 
 
 
