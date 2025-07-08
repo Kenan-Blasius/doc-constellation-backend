@@ -23,6 +23,8 @@ Welcome to the Constellation Backend API documentation. This documentation provi
 
 ### SSE API Endpoints
 
+- [SSE Server](sse_server/overview.md)
+
 ### CRDT Server
 
 - [CRDT Server](crdt_server/overview.md)
