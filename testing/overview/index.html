@@ -1580,6 +1580,47 @@
     Run tests locally
   </a>
   
+    <nav class="md-nav" aria-label="Run tests locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neo4j" class="md-nav__link">
+    Neo4j
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgres" class="md-nav__link">
+    Postgres
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sse" class="md-nav__link">
+    SSE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crdt" class="md-nav__link">
+    CRDT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rag-ai" class="md-nav__link">
+    RAG AI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1723,6 +1764,47 @@
     Run tests locally
   </a>
   
+    <nav class="md-nav" aria-label="Run tests locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neo4j" class="md-nav__link">
+    Neo4j
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgres" class="md-nav__link">
+    Postgres
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sse" class="md-nav__link">
+    SSE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crdt" class="md-nav__link">
+    CRDT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rag-ai" class="md-nav__link">
+    RAG AI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1745,10 +1827,90 @@
 
 <h1 id="testing">Testing</h1>
 <h2 id="github-actions">GitHub Actions</h2>
-<p>...</p>
+<p>The project uses GitHub Actions to run tests automatically on every push and pull request. The workflow is defined in <code>.github/workflows/test-SERVICE.yml</code>. It includes steps to:</p>
+<ul>
+<li>Set up the environment</li>
+<li>Install dependencies</li>
+<li>Run tests for the specified service (Neo4j, Postgres, SSE)</li>
+<li>Generate and upload code coverage reports in artifacts and upload it to Github Pages when the branch is <code>main</code></li>
+</ul>
+<p>When the deploying GitHub Action is triggered, it will automatically run the tests and deploy only if the tests pass.</p>
 <h2 id="run-tests-locally">Run tests locally</h2>
-<div class="highlight"><pre><span></span><code>./tests/run_output.sh
+<p>To run the tests locally, you can use the following commands:</p>
+<p>First, start the backend server:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
 </code></pre></div>
+<p>Then, run the tests for the specific service:</p>
+<h3 id="neo4j">Neo4j</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install the tests dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>./api_neo4j/tests/requirements.txt
+
+<span class="c1"># Run the tests</span>
+python3<span class="w"> </span>./api_neo4j/tests/test_main.py
+</code></pre></div>
+<h3 id="postgres">Postgres</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install the tests dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>./api_postgres/tests/requirements.txt
+
+<span class="c1"># Run the tests</span>
+python3<span class="w"> </span>./api_postgres/tests/test_main.py
+</code></pre></div>
+<h3 id="sse">SSE</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install the tests dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>./sse_server/tests/requirements.txt
+
+<span class="c1"># Run the tests</span>
+python3<span class="w"> </span>./sse_server/tests/test_main.py
+</code></pre></div>
+<h3 id="crdt">CRDT</h3>
+<p>The CRDT tests are not yet implemented.</p>
+<h3 id="rag-ai">RAG AI</h3>
+<p>The RAG AI tests are not automated with github actions due to the missing power capacity of the GitHub runner. You can run the tests locally by following these steps:</p>
+<ol>
+<li>
+<p>Start the backend server:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
+</code></pre></div>
+</li>
+<li>
+<p>Run the frontend server:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># In the constellation (frontend repository) directory</span>
+bun<span class="w"> </span>install
+bun<span class="w"> </span>dev
+</code></pre></div>
+</li>
+<li>
+<p>Connect to the frontend server at <code>http://localhost:3000</code> and do the following:</p>
+<ul>
+<li>Create a constellation</li>
+<li>Create a collection</li>
+<li>Create a File</li>
+<li>Copy Paste the content of the story you want to test.</li>
+</ul>
+</li>
+<li>
+<p>The tests are designed to query the RAG AI service with predefined questions.</p>
+<ul>
+<li>For Alice, you can use the questions in <code>test_query_alice.py</code>.</li>
+<li>For La Parure, you can use the questions in <code>test_query_la_parure.py</code>.</li>
+</ul>
+<p>Make sure to update the <code>constellation_uuid</code>, <code>username</code>, and <code>password</code> variables in the test files to match your setup.</p>
+</li>
+<li>
+<p>Run the tests:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># In the constellation-backend (backend repository) directory</span>
+
+<span class="c1"># If you want to test the Alice story, you can run:</span>
+python3<span class="w"> </span>./rag_ai/tests/test_query_alice.py
+
+<span class="c1"># If you want to test the La Parure story, you can run:</span>
+python3<span class="w"> </span>./rag_ai/tests/test_query_la_parure.py
+</code></pre></div>
+</li>
+<li>
+<p>Check the output of the tests in the terminal. The tests will print the results of the queries and whether they were successful or not with a percentage of success.</p>
+</li>
+</ol>
 
 
 
